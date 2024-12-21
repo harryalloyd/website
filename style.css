@@ -1,0 +1,774 @@
+h1{
+    margin: 150px;
+    border: 2px solid;
+    width: 230px;
+    height: 50px;
+    border-color: grey;
+    color:white;
+    font-family: Arial, sans-serif;
+}
+h4{
+    color:white;
+    font-family: Arial, sans-serif;
+}
+
+p{
+    color:white;
+}
+
+
+.nav-container a:hover {
+    color: #cda8fb;
+}
+
+.nav-container {
+    padding: 10px 0;
+    text-align: right;
+    margin-top: 20px; /* Moves downward */
+    margin-right: 20px;
+}
+
+.nav-container a {
+    color: white; /* Default text color */
+    text-decoration: none;
+    margin: 5px;
+    padding: 7px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-container a span {
+    color: #cda8fb; /* Set the numbers to red */
+    margin-right: 2px;
+}
+
+.nav-container a:before {
+    content: attr(data-number); /* Add numbers dynamically */
+    color: rgb(205, 168, 251); /* Cyan color for numbers */
+    margin-right: 8px;
+}
+
+.resume-button {
+    border: 1px solid rgb(205, 168, 251); /* Cyan border for resume button */
+    font-size: 14px;
+    text-align: center; /* Horizontally center the text */
+    margin-right:10px;
+}
+
+.section {
+    padding: 50px;
+    margin-top: 50px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.fa-instagram {
+    color: rgb(129, 52, 175);
+}
+
+.fa-github {
+    color: rgb(255, 255, 255);
+}
+
+.fa-linkedin {
+    color: rgb(70, 155, 224);
+}
+
+.social-container a {
+    display: inline-block;  
+    margin: 25px 7px;
+    padding: 5px;
+    font-size: 16px;
+    transform: translateY(-20px);
+}
+
+.social-container {
+    text-align: right;
+    margin-top: 10px; /* Moves downward */
+    margin-right: 10px; 
+    font-family: 'Audiowide', sans-serif;
+}
+
+.social-container .social-label {
+    color: rgb(225, 225, 225);  
+    font-size: 16px;            
+    padding: 10px;      
+    font-family: Arial, sans-serif;        
+}
+
+.social-container .fa-arrow-right {
+    color: #00e6e6; /* Keeps the cyan color consistent */
+    vertical-align: center; /* Aligns the arrow to the middle of the text */
+    margin-top: 50px;
+}
+
+#box {
+    text-align: center;
+    font-family: 'Audiowide', sans-serif;
+    position: relative; 
+    left: 0%;
+    overflow: hidden; /* Ensures that the sliding text is hidden before it slides in */
+}
+
+#box span {
+    font-size: 3em;
+    color: rgb(3, 252, 223);
+    display: inline-block;
+    position: relative;
+    animation-name: slideRight, fadeOut; /* Add fadeOut animation */
+    animation-duration: 2s, 3s; /* Duration for slideRight, then for fadeOut */
+    animation-delay: 0s, 3s; /* Slide first, then fade after 2 seconds */
+    animation-fill-mode: forwards; /* Keeps the text in the final state after the animation completes */
+}
+
+@keyframes slideRight {
+    from { transform: translateX(1500px); }
+    to { transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+
+
+
+.contact-container a:hover {
+    color: #cda8fb;
+}
+
+.contact-container a{
+    padding: 10px 0;
+    text-align: right;
+    color: rgb(225, 225, 225);
+}
+
+#About {
+    margin-top: 50px; /* Increase the margin-top to push it further down */
+}
+
+#About h2 {
+    color: white;  
+    text-align: left;
+    margin-left: 310px;
+    position: relative;
+    font-size: 2em;
+    display: inline-block;
+    
+
+}
+
+#About h2::after {
+    content: "";
+    display: inline-block;
+    width: 245px; /* Adjust the width of the line here */
+    height: 2px;
+    background-color: rgb(205, 168, 251); /* Light grey color */
+    position: relative;
+    top: -7px; /* Adjust vertical alignment */
+    margin-left: 20px; /* Space between the text and line */
+}
+
+
+
+.About-info {
+    border: 1px solid #FFFFFF; 
+    width: 470px;              
+    text-align: center;        
+    padding: 10px;             
+    margin: 0 auto;            
+    display: block;   
+         
+}
+
+
+
+#Projects h2 {
+    color: white; 
+    text-align: center;
+}
+
+.Projects-info {
+    border: 1px solid #FFFFFF; 
+    width: 440px;              
+    text-align: center;        
+    padding: 10px;            
+    margin: 0 auto;          
+    display: block;  
+    border-color: rgb(14, 25, 44);
+          
+}
+
+
+
+#Work h2 {
+    color: white; 
+    text-align: center;
+}
+
+.Work-info {
+    border: 1px solid #FFFFFF; 
+    width: 440px;             
+    text-align: center;       
+    padding: 10px;           
+    margin: 0 auto;            
+    display: block;
+    border-color: rgb(14, 25, 44);
+            
+}
+
+
+#Contact h2 {
+    color: white; 
+    text-align: center;
+}
+
+.Contact-info {
+    border: 1px solid #FFFFFF; 
+    width: 440px;              
+    text-align: center;       
+    padding: 10px;            
+    margin: 0 auto;            
+    display: block;           
+    /*border-color: rgb(14, 25, 44);*/
+}
+
+.contact-container{
+    border: 1px solid #FFFFFF; 
+    width: 440px;              
+    text-align: center;       
+    padding: 10px;            
+    margin: 0 auto;            
+    display: block;           
+
+}
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(5, 10, 21);
+    min-height: 100vh;
+    
+}
+.container {
+    position: fixed;  /* Makes the container stay in place even during scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;  /* Sets the z-index to negative to ensure it stays behind all other content */
+    overflow: hidden;  /* Prevents any overflow content from appearing outside the container */
+    pointer-events: none;  /* Makes the container non-interactive, allowing clicks to pass through to elements below */
+}
+.bubbles {
+    position: relative;
+    display: flex;
+}
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(150s / var(--i));
+}
+.bubbles span:nth-child(even) {  
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;
+}
+@keyframes animate {
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(.5);
+    }
+    
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px auto;
+    padding-left: 150px; /* Adds space to the left, moving both the text and image to the right */
+    width: 80%; /* You can adjust this percentage if necessary */
+}
+
+.text-box {
+    width: 45%; /* Takes 40% of the space */
+    padding-right: 1px; /* Space between the text and the image */
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: rgba(129, 128, 128, 0.4); /* Adds a semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px; /* Optional: for rounded corners */
+    margin-bottom: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-box:hover {
+    transform: translateY(-10px); /* Moves the text box up by 10px */
+    box-shadow: 0px 8px 12px rgba(47, 45, 45, 0.5); /* Adds shadow for depth */
+    
+}
+
+
+.welcome-image {
+    margin-left: 100px;
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid rgb(205, 168, 251);
+    margin-bottom: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+.welcome-image:hover {
+    transform: translateY(-10px); /* Moves the image up by 10px */
+    box-shadow: 0px 8px 12px rgba(47, 45, 45, 0.5); /* Adds shadow for depth */
+}
+
+.text-box p {
+    color: #f0f0f0; /* A lighter shade of white to stand out against the dark background */
+    font-weight: 600; /* Make the text bold */
+
+}
+
+.highlight {
+    color: rgb(3, 252, 223); /* Light blue/cyan color */
+}
+
+.work-container {
+    display: flex;
+    flex-direction: row; /* Aligns job list and description side by side */
+    justify-content: space-between; /* Space between items */
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 80%; /* Adjust this depending on your layout */
+}
+
+.work-list {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px; /* Reduce the margin between the list and the description */
+    width: 30%; /* Adjust this width to make the list narrower */
+    list-style-type: none;
+}
+.work-list li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.work-item {
+    background: none;
+    border: none;
+    color: rgb(3, 252, 223); /* Cyan text color for job buttons */
+    text-align: left;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.work-item:hover {
+    color: rgba(205, 168, 251, 0.7); /* Lighter cyan on hover */
+}
+
+
+
+.work-details {
+    margin-left: 10px; /* Reduce the margin between the list and the description */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Adds depth */
+    color: white;
+    width: 65%; /* Adjust width to match the layout */
+    
+}
+
+.work-detail h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #cda8fb;
+}
+
+.work-detail p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+#work-section {
+    width: 50%;
+    margin: 20px auto;
+    color: white;
+    font-size: 17px;
+}
+
+#work-section h2 {
+    position: relative;
+    font-size: 2em;
+    color: white; /* Ensures the text color for "Where I've Worked" is white */
+    text-align: left;
+}
+
+
+#work-section h2::after {
+    content: "";
+    display: inline-block;
+    width: 290px; /* Adjust the width of the line here */
+    height: 2px;
+    background-color: rgba(205, 168, 251, 0.7); /* Light purple color */
+    position: left;
+    top: 50%;
+    left: 100%; /* Aligns it next to the text */
+    margin-left: 10px; /* Adjust the spacing between the text and the line */
+    transform: translateY(-50%);
+    margin-bottom: 7px;
+}
+
+.work-section {
+    background-color: rgba(158, 156, 156, 0.1); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Adds shadow for depth */
+    color: white;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.work-section h2 {
+    font-size: 2em;
+    margin-bottom: 100px; /* Increase this value to move it further from the jobs */
+    color: white;
+    text-align: left;
+    margin-top: 100px;
+    
+}
+
+.job-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-list {
+    width: 45%;
+    margin-top: 40px;
+}
+
+.job-list ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.job-list ul li {
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-bottom: 35px; /* Adjust margin for more space between jobs */
+}
+
+.job-list ul li:hover,
+.job-list ul li.active {
+    color: #cda8fb;
+}
+
+.job-description {
+    width: 55%;
+    background-color: rgba(180, 177, 177, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.job-description:hover {
+    transform: translateY(-10px); /* Moves the element upwards */
+    box-shadow: 0px 8px 12px rgba(47, 45, 45, 0.5); /* Adds shadow for depth */
+}
+
+.description {
+    display: none;
+}
+
+.description.active {
+    display: block;
+}
+
+.job-description h3 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.job-description p {
+    font-size: 1.0em; /* Adjust the value to make it smaller */
+    line-height: 1.3; /* Optionally adjust the line-height */
+}
+
+.description ul {
+    margin-left: 20px; /* Adds space to indent the bullet points */
+    list-style-type: disc; /* Adds bullet points */
+    margin-bottom: 10px;
+}
+
+/* Styling the individual list items */
+.description ul li {
+    margin-bottom: 10px; /* Adds space between each list item */
+}
+
+/* Adding more spacing between languages */
+.language {
+    color: rgb(3, 252, 223); /* Cyan color */
+    margin-right: 10px;
+    font-size: 0.9em; /* You can adjust the size if needed */
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.language-container {
+    text-align: center; /* Centers the content inside the container */
+    margin-top: 10px; /* Adds some space above the languages */
+}
+
+.company-highlight {
+    color: rgb(3, 252, 223); /* Cyan blue color */
+}
+
+.job-date {
+    color: white;
+    font-size: 0.9em; /* Adjust the size as necessary */
+    margin-bottom: 10px; /* Adds space below the date */
+}
+
+#Projects h2 {
+    color: white; /* Ensure the title is white */
+    text-align: left;
+    margin-left: 200px;
+    position: relative;
+    font-size: 2em;
+}
+
+#Projects h2::after {
+    content: "";
+    display: inline-block;
+    width: 200px; /* Adjust width as needed */
+    height: 2px;
+    background-color: rgba(205, 168, 251, 0.7); /* Light purple line */
+    position: left;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    top: 50%;
+    left: 100%;
+    margin-left: 10px; /* Adjust spacing between text and line */
+    transform: translateY(-50%);
+}
+.projects-container {
+    display: flex;
+    justify-content: center; /* Keeps the project boxes centered */
+    padding: 20px;
+}
+
+.project-box {
+    background-color: rgba(61, 62, 62, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(47, 45, 45, 0.3);
+    width: 24%;
+    min-height: 350px;
+    color: white;
+    margin-left: 10px; /* Reduce margin-left to bring the boxes closer */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-box:hover {
+    transform: translateY(-10px); /* Move the box upward */
+    box-shadow: 0px 8px 12px rgba(47, 45, 45, 0.5); /* Increase the shadow to add depth */
+}
+
+.project-box h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: rgb(3, 252, 223);
+    margin-top: 30px
+}
+
+.project-box p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.project-box:first-child {
+    margin-left: 0; /* Remove margin-left for the first box to keep centering aligned */
+}
+
+.project-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-icons .right-icons {
+    display: flex;
+    gap: 10px; /* Space between the GitHub and external link icons */
+}
+
+/* Target the folder icon to make it larger */
+.project-icons .fa-folder {
+    font-size: 2.5em; /* Make the folder icon larger */
+    color: rgba(255, 255, 255, 0.7); /* Default color */
+    transition: color 0.3s ease;
+}
+
+/* Target the GitHub and external link icons to make them smaller */
+.project-icons .fa-github, 
+.project-icons .fa-arrow-up-right-from-square {
+    font-size: 1.5em; /* Make the GitHub and external link icons smaller */
+    color: rgba(255, 255, 255, 0.7); /* Default color */
+    transition: color 0.3s ease;
+}
+
+/* Optional: Hover effect to change color */
+.project-icons i:hover {
+    color: rgb(3, 252, 223); /* Change to your preferred hover color */
+}
+
+#Projects {
+    margin-bottom: 300px; /* Add this line */
+}
+
+
+
+
+
+#Connent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 300px;
+}
+
+/* Large textbox container */
+.contact-box {
+    margin-left: 10px; /* Centers it horizontally */
+    background-color: rgba(61, 62, 62, 0.9); /* Optional background */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 45%; /* Adjust width as needed */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: translateY(-10px); /* Moves the whole contact section upwards */
+    box-shadow: 0px 8px 12px rgba(47, 45, 45, 0.5); /* Adds shadow for depth */
+}
+
+/* Title styling */
+.Connent-title {
+    margin-top: 2px;
+    font-size: 3em;
+    color: rgb(3, 252, 223);
+    margin-bottom: 90px; /* Adjust this for more vertical space */
+    margin-left: 20px;
+    outline: none; /* Ensures no outline around the title */
+    border: none;  /* Removes any border that could be causing the box */
+    box-shadow: none; /* If there's any shadow property, this removes it */
+    white-space: nowrap; /* Ensures the text stays on one line */
+
+}
+
+/* Info text styling */
+.Connent-info {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 55px; /* Add space below paragraph */
+}
+
+/* Email icon styling */
+.contact-me .email-icon i {
+    color: #00e6e6;
+    transition: transform 0.3s ease;
+    font-size: 2.2em;
+}
+
+.contact-me .email-icon i:hover {
+    transform: scale(1.1);
+}
+
+.contact-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adds space between the icon and the button */
+}
+.email-icon i {
+    color: #00e6e6;
+    transition: transform 0.3s ease;
+    font-size: 2.2em;
+}
+
+.email-icon i:hover {
+    transform: scale(1.1);
+}
+
+/* Say Hello Button styling */
+.say-hello-btn {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #00e6e6;
+    padding: 10px 20px;
+    color: #00e6e6;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    gap: 10px; /* Adds space between the icon and the text */
+}
+.say-hello-btn i {
+    font-size: 1.2em; /* Adjust the size of the mail icon */
+}
+
+.say-hello-btn:hover {
+    background-color: #00e6e6;
+    color: #000;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 1em;
+    margin-top: 50px; /* Adds space between footer and content above */
+}
+
+.footer p {
+    margin: 0;
+}
+
