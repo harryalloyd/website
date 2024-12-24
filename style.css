@@ -112,34 +112,7 @@ html {
     transform: scale(1.2); /* Optional: slight enlargement on hover */
 }
 
-#box {
-    text-align: center;
-    font-family: 'Audiowide', sans-serif;
-    position: relative; 
-    left: 0%;
-    overflow: hidden; /* Ensures that the sliding text is hidden before it slides in */
-}
 
-#box span {
-    font-size: 3em;
-    color: rgb(3, 252, 223);
-    display: inline-block;
-    position: relative;
-    animation-name: slideRight, fadeOut; /* Add fadeOut animation */
-    animation-duration: 2s, 3s; /* Duration for slideRight, then for fadeOut */
-    animation-delay: 0s, 3s; /* Slide first, then fade after 2 seconds */
-    animation-fill-mode: forwards; /* Keeps the text in the final state after the animation completes */
-}
-
-@keyframes slideRight {
-    from { transform: translateX(1500px); }
-    to { transform: translateX(0); }
-}
-
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
 
 
 
