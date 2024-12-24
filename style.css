@@ -306,18 +306,23 @@ html {
 
 
 .profile-text h1 .wave-emoji {
-    font-size: 2rem; /* Adjust emoji size */
-    animation: wave 2s infinite; /* Keep waving animation */
+    font-size: 2rem; /* or 1.5rem, whichever you like */
+    display: inline-block; /* ensures transform won't affect surrounding text */
+    cursor: pointer;       /* optional: show pointer on hover */
+}
+
+.profile-text h1 .wave-emoji:hover {
+    animation: wave 1s infinite;
 }
 
 @keyframes wave {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-    60% { transform: rotate(0deg); }
+    0%   { transform: rotate(0deg); }
+    10%  { transform: rotate(14deg); }
+    20%  { transform: rotate(-8deg); }
+    30%  { transform: rotate(14deg); }
+    40%  { transform: rotate(-4deg); }
+    50%  { transform: rotate(10deg); }
+    60%  { transform: rotate(0deg); }
     100% { transform: rotate(0deg); }
 }
 
