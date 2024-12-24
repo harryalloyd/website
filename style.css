@@ -23,7 +23,7 @@ p{
 
 .nav-container {
     padding: 10px 0;
-    text-align: right;
+    text-align: center;
     margin-top: 20px; /* Moves downward */
     margin-right: 20px;
 }
@@ -33,7 +33,7 @@ p{
     text-decoration: none;
     margin: 5px;
     padding: 7px;
-    font-size: 16px;
+    font-size: 22px;
     transition: color 0.3s ease;
 }
 
@@ -80,13 +80,12 @@ html {
     display: inline-block;  
     margin: 25px 7px;
     padding: 5px;
-    font-size: 16px;
+    font-size: 24px;
     transform: translateY(-20px);
 }
 
 .social-container {
-    text-align: right;
-    margin-top: 10px; /* Moves downward */
+    text-align: center;
     margin-right: 10px; 
     font-family: 'Audiowide', sans-serif;
 }
@@ -102,6 +101,15 @@ html {
     color: #00e6e6; /* Keeps the cyan color consistent */
     vertical-align: center; /* Aligns the arrow to the middle of the text */
     margin-top: 50px;
+}
+
+.social-container i {
+    font-size: 30px; /* Larger icon size */
+    transition: transform 0.3s ease; /* Optional: adds a smooth hover effect */
+}
+
+.social-container i:hover {
+    transform: scale(1.2); /* Optional: slight enlargement on hover */
 }
 
 #box {
@@ -255,7 +263,7 @@ html {
 }
 
 body {
-    background-color: rgb(5, 10, 21);
+    background-color: rgb(17, 17, 17);
     min-height: 100vh;
     
 }
@@ -277,29 +285,29 @@ body {
     position: relative;
     width: 30px;
     height: 30px;
-    background: #4fc3dc;
+    background: #c0c0c0;
     margin: 0 4px;
     border-radius: 50%;
-    box-shadow: 0 0 0 10px #4fc3dc44,
-    0 0 50px #4fc3dc,
-    0 0 100px #4fc3dc;
+    box-shadow: 0 0 0 10px #c0c0c044, /* Glow effect */
+    0 0 50px #c0c0c0, 
+    0 0 100px #c0c0c0;
     animation: animate 15s linear infinite;
     animation-duration: calc(150s / var(--i));
 }
 .bubbles span:nth-child(even) {  
-    background: #ff2d75;
-    box-shadow: 0 0 0 10px #ff2d7544,
-    0 0 50px #ff2d75,
-    0 0 100px #ff2d75;
+    background: #c0c0c0; /* Light gray for alternating dots */
+    box-shadow: 0 0 0 10px #c0c0c044, 
+                0 0 50px #c0c0c0, 
+                0 0 100px #c0c0c0;
 }
 @keyframes animate {
     0%
     {
-        transform: translateY(100vh) scale(0);
+        transform: translateY(100vh) scale(.1);
     }
     100%
     {
-        transform: translateY(-10vh) scale(.5);
+        transform: translateY(-10vh) scale(0.1);
     }
     
 }
@@ -314,22 +322,22 @@ body {
 }
 
 .text-box {
-    width: 45%; /* Takes 40% of the space */
-    padding-right: 1px; /* Space between the text and the image */
+    width: 80%; /* Adjust width as needed */
+    padding-right: 1px;
     color: white;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.6;
-    background-color: rgba(129, 128, 128, 0.4); /* Adds a semi-transparent black background */
+    background-color: transparent; /* Keeps it transparent */
     padding: 20px;
-    border-radius: 10px; /* Optional: for rounded corners */
+    border-radius: 10px;
     margin-bottom: 250px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .text-box:hover {
-    transform: translateY(-10px); /* Moves the text box up by 10px */
-    box-shadow: 0px 8px 12px rgba(47, 45, 45, 0.5); /* Adds shadow for depth */
-    
+    transform: translateY(-10px); /* Moves the text box up slightly */
+    box-shadow: 0px 10px 20px rgba(100, 100, 100, 0.6), /* Add brighter glow */
+                0px 15px 25px rgba(150, 150, 150, 0.4); /* Slight outer glow */
 }
 
 
