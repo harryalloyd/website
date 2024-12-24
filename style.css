@@ -116,6 +116,222 @@ html {
 
 
 
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Keep content closer to the top */
+    height: 100vh; /* Full viewport height */
+    padding-top: 50px; /* Spacing from the top */
+    background: transparent; /* Match the background */
+    padding-right: 100px; /* Move everything slightly to the left */
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between the image and text */
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2; /* Ensure the image is on top of the border animation */
+}
+
+.profile-image-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.profile-image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+
+  .ring {
+    position: absolute;
+    
+    /* Shift it “outside” the 100×100 box, e.g.  -10px each side = 120 total. */
+    top: -5px;
+    left: -5px;
+    width: 110px;
+    height: 110px;
+    
+    /* Rotate -90deg so the stroke starts at the top. */
+    transform: rotate(-90deg);
+  }
+
+.ring circle {
+    fill: none;
+    stroke: rgb(205, 168, 251);
+    stroke-width: 3;
+    stroke-dasharray: 346;      /* ~2π×55 */
+    stroke-dashoffset: 346;     /* fully hidden */
+    
+    /* By default, no transition, so it snaps back instantly on mouseout */
+    transition: stroke-dashoffset 0s;
+  }
+
+  .profile-image-container:hover .ring circle {
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.75s linear; 
+  }
+
+.profile-image-container:hover circle {
+    stroke-dashoffset: 0; 
+}
+
+.profile-image-container::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    border-radius: 50%;
+    z-index: 1;
+    
+    /* 6px thick purple ring */
+    background: radial-gradient(
+        circle calc(50% - 6px) at center,
+        transparent calc(50% - 6px),
+        rgb(205, 168, 251) calc(50%),
+        rgb(205, 168, 251) 100%
+    );
+
+    /*
+       Start with a tiny wedge at the top center:
+       50% 50% (center) -> 50% 0% (top center),
+       repeated to basically make the wedge 0° wide.
+    */
+    clip-path: polygon(
+      50% 50%, 
+      50% 0%, 
+      50% 0%, 
+      50% 0%
+    );
+
+    transition: clip-path 1.0s linear;
+}
+
+
+
+.profile-image-container:hover::before {
+    animation: fillRing 1.0s linear forwards;
+}
+
+@keyframes fillRing {
+    0% {
+        clip-path: polygon(
+          50% 50%, 
+          50% 0%, 
+          50% 0%, 
+          50% 0%
+        );
+    }
+    100% {
+        clip-path: polygon(
+          50% 50%, 
+          50% 0%, 
+          100% 0%, 
+          100% 100%, 
+          0% 100%, 
+          0% 0%, 
+          50% 0%
+        );
+    }
+}
+
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-text {
+    text-align: left;
+}
+
+.profile-text h1 {
+    font-size: 2.5rem; /* Adjust font size */
+    margin: 0;
+    color: white;
+    white-space: nowrap; /* Ensures text stays on one line */
+    background: none !important; /* Ensures no background */
+    box-shadow: none !important; /* Ensures no shadow */
+    border: none !important; /* Removes any borders */
+    outline: none !important; /* Removes any outlines */
+    padding: 0 !important; /* Removes padding */
+}
+
+
+
+.welcome-section h1 {
+    font-size: 1.8rem; /* Smaller font size */
+    margin: 10px 0; /* Adjust spacing */
+    color: white;
+}
+
+.welcome-section h1 .wave-emoji {
+    font-size: 1.5rem; /* Adjust emoji size */
+}
+
+.profile-text p {
+    font-size: 1rem; /* Adjust text size */
+    color: rgb(176, 173, 173); /* Lighter gray for the location text */
+    margin: 5px 0 0;
+    display: flex; /* Align icon and text inline */
+    align-items: center; /* Vertically center icon and text */
+    gap: 5px; /* Add space between the icon and text */
+}
+
+.profile-text p i {
+    font-size: 1rem; /* Match the text size for the icon */
+    color: rgb(176, 173, 173); /* Same color as the text */
+}
+
+
+.profile-text h1 .wave-emoji {
+    font-size: 2rem; /* Adjust emoji size */
+    animation: wave 2s infinite; /* Keep waving animation */
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.welcome-section p {
+    font-size: 1rem; /* Smaller location text */
+    color: rgb(176, 173, 173); /* Lighter gray for the location text */
+    margin-top: 5px;
+}
+
+
+
+
+
+
 
 .contact-container a:hover {
     color: #cda8fb;
