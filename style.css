@@ -165,8 +165,6 @@ html {
     position: relative;
     font-size: 2em;
     display: inline-block;
-    
-
 }
 
 #About h2::after {
@@ -188,8 +186,7 @@ html {
     text-align: center;        
     padding: 10px;             
     margin: 0 auto;            
-    display: block;   
-         
+    display: block;       
 }
 
 
@@ -673,110 +670,145 @@ body {
 
 
 
-#Connent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 1px;
-    margin-bottom: 300px;
-}
 
-/* Large textbox container */
+
 .contact-box {
-    margin-left: 10px; /* Centers it horizontally */
-    background-color: rgba(61, 62, 62, 0.9); /* Optional background */
-    padding: 30px;
+    background-color: transparent; /* Transparent background */
+    padding: 20px 30px; /* Padding inside the box */
     border-radius: 10px;
-    text-align: center;
-    width: 45%; /* Adjust width as needed */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 60%; /* Adjust width */
+    margin: 135px auto; /* Center horizontally and add vertical margin */
+    text-align: left; /* Align text to the left */
+    box-shadow: none; /* No glow by default */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    display: flex; /* Make the box a flex container */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start; /* Align items to the left */
+    border: .5px solid rgb(176, 173, 173); /* Add a solid border with a light grey color */
+    background: transparent; /* Remove any background color */
 }
 
 .contact-box:hover {
-    transform: translateY(-10px); /* Moves the whole contact section upwards */
-    box-shadow: 0px 8px 12px rgba(47, 45, 45, 0.5); /* Adds shadow for depth */
+    transform: translateY(-5px); /* Slight hover effect */
+    box-shadow: 0px 10px 20px rgba(150, 150, 150, 0.8); /* Glow effect */
 }
 
-/* Title styling */
-.Connent-title {
-    margin-top: 2px;
-    font-size: 3em;
-    color: rgb(3, 252, 223);
-    margin-bottom: 90px; /* Adjust this for more vertical space */
-    margin-left: 20px;
-    outline: none; /* Ensures no outline around the title */
-    border: none;  /* Removes any border that could be causing the box */
-    box-shadow: none; /* If there's any shadow property, this removes it */
-    white-space: nowrap; /* Ensures the text stays on one line */
-
-}
-
-/* Info text styling */
-.Connent-info {
-    font-size: 1.2em;
+.contact-box .contact-title {
+    font-size: 2rem;
+    font-weight: bold;
     color: white;
-    margin-bottom: 55px; /* Add space below paragraph */
+    margin: 0 0 10px 0; /* No margin on top, add space below */
+    background: transparent !important; /* No background color */
+    box-shadow: none !important; /* No shadow */
+    border: none !important; /* No border */
+    padding: 0; /* No padding */
+    text-align: left;
+    position: relative;
+    font-size: 2em;
+    display: inline-block;
+
 }
 
-/* Email icon styling */
-.contact-me .email-icon i {
-    color: #00e6e6;
-    transition: transform 0.3s ease;
-    font-size: 2.2em;
+.contact-title::after {
+    content: "";
+    display: inline-block;
+    width: 245px; /* Adjust the width of the line */
+    height: 2px;
+    background-color: rgb(205, 168, 251); /* Same color as "About Me" */
+    position: relative;
+    top: -50px; /* Align the line vertically */
+    margin-left: 230px; /* Space between the text and the line */
 }
 
-.contact-me .email-icon i:hover {
-    transform: scale(1.1);
+.contact-box .contact-info {
+    font-size: 1.2rem;
+    color: rgb(176, 173, 173);
+    margin-bottom: 60px; /* Add space below the text */
+}
+
+.contact-me p:nth-child(1) { /* Makes the first line (Discord/Email/LinkedIn) bold */
+    font-weight: bold;
 }
 
 .contact-me {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Adds space between the icon and the button */
-}
-.email-icon i {
-    color: #00e6e6;
-    transition: transform 0.3s ease;
-    font-size: 2.2em;
+    gap: 40px; /* Adjust spacing between items */
+    margin-top: 20px;
 }
 
-.email-icon i:hover {
-    transform: scale(1.1);
+.contact-me div {
+    text-align: center;
+    color: white;
+    font-size: 16px; /* Match text size */
+    margin: 0 60px; /* Add horizontal spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
-/* Say Hello Button styling */
-.say-hello-btn {
-    display: inline-flex;
-    align-items: center;
-    border: 2px solid #00e6e6;
-    padding: 10px 20px;
-    color: #00e6e6;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    gap: 10px; /* Adds space between the icon and the text */
-}
-.say-hello-btn i {
-    font-size: 1.2em; /* Adjust the size of the mail icon */
+.contact-me div:hover {
+    transform: translateY(-5px); /* Slight hover */
 }
 
-.say-hello-btn:hover {
-    background-color: #00e6e6;
-    color: #000;
+.contact-me i {
+    color: white; /* Default icon color */
+    margin-bottom: 10px;
+    font-size: 50px; /* Adjust icon size */
+    transition: color 0.3s ease; /* Smooth hover effect */
 }
+
+.contact-me p {
+    margin: 5px 0;
+    font-size: 17px; /* Adjust text size */
+    color: #f0f0f0; /* Lighter text color */
+}
+
+.contact-me a {
+    color: inherit; /* Inherits the color from the parent element */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.contact-me a:hover i {
+    color: #00e6e6; /* Optional: Hover effect for all icons */
+    cursor: pointer; /* Changes the cursor to a pointer */
+}
+
+
+
+
+
+
+
+
 
 .footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     color: white;
     font-size: 1em;
-    margin-top: 50px; /* Adds space between footer and content above */
+    margin-top: 50px; /* Adds space between the content above and the footer */
+    position: relative; /* Ensures it doesn't overlap with content */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Match the page background */
+    box-shadow: none; /* Optional: No shadow */
 }
 
 .footer p {
     margin: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%; /* Ensure the page content fills the viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-box {
+    flex: 1; /* Allows the main content to take up the available space */
 }
 
