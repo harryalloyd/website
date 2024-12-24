@@ -64,30 +64,54 @@ html {
     scroll-behavior: smooth;
 }
 
-.fa-instagram {
-    color: rgb(129, 52, 175);
+.fa-instagram { color: rgb(129, 52, 175); }
+.fa-github    { color: rgb(255, 255, 255); }
+.fa-linkedin  { color: rgb(70, 155, 224); }
+
+.location-icons {
+    display: flex;
+    gap: 8px;          /* space between “Chico, CA” and icons */
 }
 
-.fa-github {
-    color: rgb(255, 255, 255);
+.location {
+    margin: 0;               /* reset default p margin */
+    /* shift it up slightly (e.g., -3px) */
+    transform: translateY(-20px);
 }
 
-.fa-linkedin {
-    color: rgb(70, 155, 224);
+.location {
+    font-size: 1.9rem; /* or 20px, 2rem, etc. */
+    /* You could also adjust the color here if you like. */
+}
+
+.profile-text .location {
+    font-size: 1.3rem;
+}
+
+.social-container a i {
+    font-size: 25px; /* or whatever size you like */
+    transition: transform 0.3s ease;
+}
+
+.social-container a i:hover {
+    transform: scale(1.2);
 }
 
 .social-container a {
     display: inline-block;  
     margin: 25px 7px;
     padding: 5px;
-    font-size: 24px;
-    transform: translateY(-20px);
+    font-size: 5px;
+    transform: translateY(-8px);
 }
 
 .social-container {
-    text-align: center;
-    margin-right: 10px; 
-    font-family: 'Audiowide', sans-serif;
+    display: flex;           /* icons side-by-side */
+    align-items: center;     /* keep icons centered among themselves */
+    gap: 4px;               /* space between icons */
+    /* shift icons down slightly (e.g., +2px) */
+    transform: translateY(-8px);
+    margin-left: 15px;
 }
 
 .social-container .social-label {
@@ -123,7 +147,7 @@ html {
     height: 100vh; /* Full viewport height */
     padding-top: 50px; /* Spacing from the top */
     background: transparent; /* Match the background */
-    padding-right: 100px; /* Move everything slightly to the left */
+    padding-right: 60px; /* Move everything slightly to the left */
 }
 
 .profile-container {
@@ -264,6 +288,7 @@ html {
 
 .profile-text {
     text-align: left;
+    margin-top: 35px;
 }
 
 .profile-text h1 {
@@ -291,7 +316,7 @@ html {
 }
 
 .profile-text p {
-    font-size: 1rem; /* Adjust text size */
+    font-size: 2rem; /* Adjust text size */
     color: rgb(176, 173, 173); /* Lighter gray for the location text */
     margin: 5px 0 0;
     display: flex; /* Align icon and text inline */
@@ -303,6 +328,8 @@ html {
     font-size: 1rem; /* Match the text size for the icon */
     color: rgb(176, 173, 173); /* Same color as the text */
 }
+
+
 
 
 .profile-text h1 .wave-emoji {
@@ -333,11 +360,6 @@ html {
 }
 
 
-
-
-
-
-
 .contact-container a:hover {
     color: #cda8fb;
 }
@@ -349,7 +371,7 @@ html {
 }
 
 #About {
-    margin-top: 50px; /* Increase the margin-top to push it further down */
+    margin-top: -440px; /* Increase the margin-top to push it further down */
 }
 
 #About h2 {
