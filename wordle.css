@@ -1,0 +1,111 @@
+/* ========== GENERAL PAGE STYLING ========== */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* Dark background */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .game-title {
+    margin: 20px 0;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+  }
+  
+  .board-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* ========== BOARD (6 rows × 5 columns) ========== */
+  .board {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px; /* Slight gap between rows */
+  }
+  
+  /* Each row is created in JS, with columns also spaced. */
+  .tile {
+    width: 60px;
+    height: 60px;
+    background-color: #121213;
+    border: 0.1px solid #3A3A3C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    
+    /* Add spacing between letters */
+    letter-spacing: 3px;
+    
+    /* or if you prefer padding:
+    padding: 0 4px;
+    */
+  }
+  
+  /* ========== KEYBOARD LAYOUT ========== */
+  .keyboard-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px; /* space between rows */
+    gap: 6px;
+  }
+  
+  /* Default (unguessed) = light gray */
+  .key {
+    background-color: rgb(129, 131, 132); 
+    color: #ffffff; /* black text on light gray */
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    /* Approximate sizing to mimic Wordle's layout */
+    width: 40px;
+    height: 58px;
+  }
+  
+  /* Make "Enter" and "Del" wider */
+  .key.enter {
+    width: 65px;
+  }
+  .key.del {
+    width: 65px;
+  }
+  
+  /* Hover effect for keys */
+  .key:hover {
+    opacity: 0.8;
+  }
+  
+  /* ========== COLORS FOR TILES & KEYS ========== */
+  /* Correct (Green)  */
+  .correct {
+    background-color: rgb(94, 135, 83) !important;
+    border-color: rgb(94, 135, 83) !important;
+    color: #fff !important;
+  }
+  
+  /* Present (Yellow) */
+  .present {
+    background-color: rgb(177, 160, 76) !important;
+    border-color: rgb(177, 160, 76) !important;
+    color: #fff !important;
+  }
+  
+  /* Absent (Dark Gray) */
+  .absent {
+    background-color: rgb(58, 58, 60) !important;
+    border-color: rgb(58, 58, 60) !important;
+    color: #fff !important;
+  }
+  

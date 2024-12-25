@@ -493,7 +493,6 @@ html {
     padding: 10px;            
     margin: 0 auto;            
     display: block;           
-    /*border-color: rgb(14, 25, 44);*/
 }
 
 .contact-container{
@@ -579,7 +578,7 @@ html {
     background-color: transparent; /* Keeps it transparent */
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 250px;
+    margin-bottom: 150px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -758,7 +757,7 @@ html {
     border-radius: 10px;
     color: white;
     margin-top: 30px;
-    margin-bottom: 400px; /* adjust as needed */
+    margin-bottom: 200px; /* adjust as needed */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .job-description:hover {
@@ -927,10 +926,37 @@ html {
     color: white;              /* Ensure it’s visible on dark background */
     font-size: 1.7rem;         /* Adjust to taste */
     width: 80%;                /* Keep it narrower if desired */
-    margin-top: -50px;
+    margin-top: 30px;
     text-align: left;
-    margin-left: 250px;    
+    margin-left: 450px;
+    margin-bottom: 50px;    
 }
+
+.games-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* or center, if you'd like them aligned in the middle */
+    gap: 50px; /* space between the two images */
+    margin-top: 20px; /* optional top margin */
+  }
+  
+  /* Sudoku & Wordle images share the same base styling */
+  .sudoku-link img,
+  .wordle-link img {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    /* optional additional margin if you want more spacing 
+       from the top or sides */
+  }
+  
+  /* Hover effect for both images */
+  .sudoku-link img:hover,
+  .wordle-link img:hover {
+    box-shadow: 0 0 15px 5px rgba(128, 128, 128, 0.6);
+    transform: translateY(-10px);
+  }
 
 
 
@@ -1073,6 +1099,7 @@ html {
     width: 100%;
     background-color: transparent; /* Match the page background */
     box-shadow: none; /* Optional: No shadow */
+    margin-top: 100px;
 }
 
 .footer p {

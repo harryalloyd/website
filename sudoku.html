@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku Solver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sudoku.css">
+</head>
+<body>
+    <h1>Sudoku Solver</h1>
+
+    <div id="controls">
+        <button class="easy" onclick="generatePuzzle('easy')">Easy</button>
+        <button class="medium" onclick="generatePuzzle('medium')">Medium</button>
+        <button class="hard" onclick="generatePuzzle('hard')">Hard</button>
+        <button onclick="clearGrid()">Clear</button>
+        <button onclick="solveGrid()">Solve</button>
+    </div>
+
+    <table id="sudoku-grid"></table>
+
+    <script src="sudoku.js"></script>
+</body>
+</html>

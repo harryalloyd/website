@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+h1 {
+    margin: 20px 0;
+    color: white;
+}
+
+#controls {
+    margin: 20px 0;
+}
+
+#controls button {
+    font-size: 16px;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.3s ease; /* Add hover animation */
+}
+
+#controls .easy {
+    background-color: rgb(6, 173, 6);
+}
+
+#controls .easy:hover {
+    box-shadow: 0 0 10px 3px rgba(0, 128, 0, 0.6); /* Green glow on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Medium button - Yellow */
+#controls .medium {
+    background-color: rgb(245, 245, 44);
+    color: black; /* Black text for contrast on yellow background */
+}
+
+#controls .medium:hover {
+    box-shadow: 0 0 10px 3px rgba(255, 255, 0, 0.6); /* Yellow glow on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Hard button - Red */
+#controls .hard {
+    background-color: rgb(247, 37, 37);
+}
+
+#controls .hard:hover {
+    box-shadow: 0 0 10px 3px rgba(255, 0, 0, 0.6); /* Red glow on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+#controls button:not(.easy):not(.medium):not(.hard) {
+    background-color: gray; /* Default color */
+    color: white;
+}
+
+#controls button:not(.easy):not(.medium):not(.hard):hover {
+    box-shadow: 0 0 10px 3px rgba(128, 128, 128, 0.6); /* Gray glow on hover */
+    transform: scale(1.05);
+}
+
+#sudoku-grid {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#sudoku-grid td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    font-size: 20px;
+    line-height: 50px;
+    position: relative;
+}
+
+#sudoku-grid td:nth-child(3n) {
+    border-right: 3px solid #ffffff;
+}
+
+#sudoku-grid tr:nth-child(3n) td {
+    border-bottom: 3px solid #ffffff;
+}
+
+#sudoku-grid td:first-child {
+    border-left: 3px solid #fffdfd;
+}
+
+#sudoku-grid tr:first-child td {
+    border-top: 3px solid #ffffff;
+}
+
+#sudoku-grid input {
+    background-color: transparent; /* Allow td background to show */
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+#sudoku-grid input:disabled {
+    background-color: transparent; /* Prevent overriding the highlight */
+    color: rgb(255, 255, 255);
+    cursor: not-allowed;
+}
+
+.highlight {
+    background-color: #B7C9E2; /* Light blue */
+    transition: background-color 0.3s ease;
+}
+
+.conflict {
+    background-color: #f7babf; /* Light red for conflicts */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+
