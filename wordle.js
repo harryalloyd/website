@@ -1,29 +1,50 @@
-// ========== CONFIG ========== 
-const solution = "EAGLE";  // The hidden 5-letter word
-const guessesAllowed = 6;  // 6 guesses total
+// ========== CONFIG ==========
+let solution = ""; // The hidden 5-letter word (will be set dynamically)
+const guessesAllowed = 6; // 6 guesses total
+
+// ========== LOAD WORD LIST AND PICK RANDOM WORD ==========
+async function loadWordsAndSetSolution() {
+  try {
+    const response = await fetch("WORDS.txt"); // Fetch the word list
+    const wordsText = await response.text(); // Get text content
+    const words = wordsText.split("\n").map(word => word.trim().toUpperCase()); // Split into an array and trim spaces
+    solution = words[Math.floor(Math.random() * words.length)]; // Pick a random word
+    console.log("Today's solution:", solution); // Log the word for debugging
+  } catch (error) {
+    console.error("Error loading words:", error);
+  }
+}
 
 // ========== GAME STATE ==========
 let currentRow = 0;
 let currentCol = 0;
 let gameOver = false;
 
-// ========== BUILD THE BOARD ==========
-const board = document.getElementById("board");
-for (let r = 0; r < guessesAllowed; r++) {
-  // Each row is a separate grid
-  const rowDiv = document.createElement("div");
-  rowDiv.classList.add("row");
-  rowDiv.style.display = "grid";
-  rowDiv.style.gridTemplateColumns = "repeat(5, 60px)";
-  rowDiv.style.gridGap = "5px";
+// ========== INITIALIZE GAME ==========
+loadWordsAndSetSolution().then(() => {
+  buildBoard();
+  buildKeyboard();
+});
 
-  for (let c = 0; c < 5; c++) {
-    const tile = document.createElement("div");
-    tile.setAttribute("id", `row${r}-col${c}`);
-    tile.classList.add("tile");
-    rowDiv.appendChild(tile);
+// ========== BUILD THE BOARD ==========
+function buildBoard() {
+  const board = document.getElementById("board");
+  for (let r = 0; r < guessesAllowed; r++) {
+    // Each row is a separate grid
+    const rowDiv = document.createElement("div");
+    rowDiv.classList.add("row");
+    rowDiv.style.display = "grid";
+    rowDiv.style.gridTemplateColumns = "repeat(5, 60px)";
+    rowDiv.style.gridGap = "5px";
+
+    for (let c = 0; c < 5; c++) {
+      const tile = document.createElement("div");
+      tile.setAttribute("id", `row${r}-col${c}`);
+      tile.classList.add("tile");
+      rowDiv.appendChild(tile);
+    }
+    board.appendChild(rowDiv);
   }
-  board.appendChild(rowDiv);
 }
 
 // ========== BUILD THE KEYBOARD LAYOUT (3 ROWS) ==========
