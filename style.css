@@ -123,6 +123,16 @@ html {
     /* You could also adjust the color here if you like. */
 }
 
+.location-link {
+    text-decoration: none;
+    color: inherit; /* Inherits the color from the parent */
+    transition: text-decoration 0.3s ease; /* Smooth transition for the underline */
+}
+
+.location-link:hover {
+    text-decoration: underline;
+}
+
 .profile-text .location {
     font-size: 1.3rem;
 }
@@ -1099,7 +1109,7 @@ html {
     width: 100%;
     background-color: transparent; /* Match the page background */
     box-shadow: none; /* Optional: No shadow */
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .footer p {
