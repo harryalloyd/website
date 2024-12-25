@@ -16,6 +16,45 @@ p{
     color:white;
 }
 
+body {
+    background-color: rgb(17, 17, 17);
+    min-height: 100vh;
+    color: #fff; /* ensure text is white in dark mode */
+    transition: background 0.3s, color 0.3s; /* smooth mode change */
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* 4) Style the icons */
+.theme-toggle i {
+    margin: 0 5px;
+    transition: transform 0.3s;
+}
+
+/* 5) Hover effect (makes icons enlarge on hover) */
+.theme-toggle i:hover {
+    transform: scale(1.2);
+}
+
+/* 6) Distinct colors for moon & sun icons (optional) */
+.theme-toggle .fa-moon {
+    color: #cda8fb;  /* Purple-ish for night */
+}
+.theme-toggle .fa-sun {
+    color: #ffe234;  /* Golden for day */
+}
+
 
 .nav-container a:hover {
     color: #cda8fb;
@@ -371,7 +410,7 @@ html {
 }
 
 #About {
-    margin-top: -440px; /* Increase the margin-top to push it further down */
+    margin-top: -480px; /* Increase the margin-top to push it further down */
 }
 
 #About h2 {
@@ -475,11 +514,8 @@ html {
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(17, 17, 17);
-    min-height: 100vh;
-    
-}
+
+
 .container {
     position: fixed;  /* Makes the container stay in place even during scrolling */
     top: 0;
@@ -505,7 +541,7 @@ body {
     0 0 50px #c0c0c0, 
     0 0 100px #c0c0c0;
     animation: animate 15s linear infinite;
-    animation-duration: calc(150s / var(--i));
+    animation-duration: calc(500s / var(--i));
 }
 .bubbles span:nth-child(even) {  
     background: #c0c0c0; /* Light gray for alternating dots */
@@ -549,8 +585,8 @@ body {
 
 .text-box:hover {
     transform: translateY(-10px); /* Moves the text box up slightly */
-    box-shadow: 0px 10px 20px rgba(100, 100, 100, 0.6), /* Add brighter glow */
-                0px 15px 25px rgba(150, 150, 150, 0.4); /* Slight outer glow */
+    box-shadow: 0px 10px 20px rgba(100, 100, 100, 0.1), /* Add brighter glow */
+                0px 15px 25px rgba(150, 150, 150, 0.1); /* Slight outer glow */
 }
 
 
@@ -717,18 +753,19 @@ body {
 
 .job-description {
     width: 55%;
-    background-color: rgba(180, 177, 177, 0.4);
+    background-color: transparent;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     color: white;
     margin-top: 30px;
-    margin-bottom: 400px;
+    margin-bottom: 400px; /* adjust as needed */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .job-description:hover {
-    transform: translateY(-10px); /* Moves the element upwards */
-    box-shadow: 0px 8px 12px rgba(47, 45, 45, 0.5); /* Adds shadow for depth */
+    /* same glow effect as .text-box:hover */
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(100, 100, 100, 0.6),
+                0px 15px 25px rgba(150, 150, 150, 0.4);
 }
 
 .description {
@@ -813,20 +850,25 @@ body {
 }
 
 .project-box {
-    background-color: rgba(61, 62, 62, 0.9);
+    background-color: transparent;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0px 4px 6px rgba(47, 45, 45, 0.3);
+    color: white;
+
+    /* Keep your preferred width/height/margin if you like */
     width: 24%;
     min-height: 350px;
-    color: white;
-    margin-left: 10px; /* Reduce margin-left to bring the boxes closer */
+    margin-left: 10px;
+
+    /* Smooth hover transitions */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-box:hover {
-    transform: translateY(-10px); /* Move the box upward */
-    box-shadow: 0px 8px 12px rgba(47, 45, 45, 0.5); /* Increase the shadow to add depth */
+    transform: translateY(-10px); 
+    /* Glow effect similar to .text-box:hover */
+    box-shadow: 0px 10px 20px rgba(100, 100, 100, 0.6),
+                0px 15px 25px rgba(150, 150, 150, 0.4);
 }
 
 .project-box h3 {
@@ -878,9 +920,27 @@ body {
     color: rgb(3, 252, 223); /* Change to your preferred hover color */
 }
 
-#Projects {
-    margin-bottom: 300px; /* Add this line */
+
+.games-intro {
+    text-align: center;        /* Center the text under Projects */
+    margin: 20px auto;         /* Add spacing above/below */
+    color: white;              /* Ensure it’s visible on dark background */
+    font-size: 1.7rem;         /* Adjust to taste */
+    width: 80%;                /* Keep it narrower if desired */
+    margin-top: -50px;
+    text-align: left;
+    margin-left: 250px;    
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -989,6 +1049,9 @@ body {
     color: #00e6e6; /* Optional: Hover effect for all icons */
     cursor: pointer; /* Changes the cursor to a pointer */
 }
+
+
+
 
 
 
