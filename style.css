@@ -474,7 +474,7 @@ body.light-mode .location-link:hover {
 }
 
 body.light-mode .fa-location-dot {
-    color: rgb(174, 116, 246) !important; /* Apply dark blue color to the icon */
+    color: rgb(0,0,0) !important; /* Apply dark blue color to the icon */
 }
 
 /* Optional: Add hover effect for consistency */
@@ -507,6 +507,88 @@ body.light-mode .location-link:hover .fa-location-dot {
     display: block;  
     border-color: rgb(14, 25, 44);
           
+}
+
+/* Light mode: General section styling */
+body.light-mode #Projects {
+    background-color: #ffffff; /* White background for the section */
+    color: #000000; /* Default black text for all content */
+}
+
+/* Project titles in light mode */
+body.light-mode .project-box h3 {
+    color: #006bbd; /* Dark blue for project titles */
+}
+
+/* Project descriptions in light mode */
+body.light-mode .project-box p {
+    color: #333333; /* Slightly softer black for descriptions */
+}
+
+/* Icon container styling */
+body.light-mode .project-icons a i {
+    color: #000000; /* Default black for icons */
+    transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for icons */
+body.light-mode .project-icons a:hover i {
+    color: #006bbd; /* Change icon color to dark blue on hover */
+}
+
+/* Folder icon specifically */
+body.light-mode .project-icons .fa-folder {
+    color: #006bbd; /* Dark blue folder icon */
+}
+
+/* External link icon and GitHub icon hover effect */
+body.light-mode .project-icons .fa-github:hover,
+body.light-mode .project-icons .fa-arrow-up-right-from-square:hover {
+    color: #006bbd; /* Dark blue on hover */
+}
+
+/* Box styling for projects */
+body.light-mode .project-box {
+    background-color: #f9f9f9; /* Light grey background for project boxes */
+    border: 0.5px solid #dddddd; /* Thin light grey border */
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 15px; /* Add padding inside project boxes */
+    transition: box-shadow 0.3s ease; /* Smooth shadow effect on hover */
+}
+
+/* Project box hover effect */
+body.light-mode .project-box:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+body.light-mode #Projects h2 {
+    color: #000000 !important; /* Set text color to black */
+    font-weight: bold; /* Ensure bold font for emphasis */
+    text-transform: uppercase; /* Optional: Make the heading uppercase */
+    letter-spacing: 1px; /* Optional: Add slight letter spacing */
+}
+
+/* Light mode styling for the underline */
+body.light-mode #Projects h2::after {
+    content: ""; /* Add an underline */
+    display: block;
+    width: 50px; /* Adjust the width of the underline */
+    height: 2px; /* Adjust the thickness */
+    background-color: #cda8fb; /* Purple underline */
+    margin-top: 5px; /* Space between the text and underline */
+    margin-left: 0; /* Align underline with heading */
+}
+
+body.light-mode .projects-container .fa-github {
+    color: #000000 !important; /* Base color as black */
+    filter: invert(100%) contrast(100%) brightness(1%);
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for GitHub icon */
+body.light-mode .projects-container .fa-github:hover {
+    color: #006bbd !important; /* Dark blue color on hover */
+    filter: none; /* Remove filter to show the blue color */
 }
 
 
