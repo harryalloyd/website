@@ -24,7 +24,7 @@ body {
 }
 
 body.light-mode {
-    background-color: #ffffff;
+    background-color: #f9f4f4;
     color: #000000;
 }
 
@@ -511,7 +511,7 @@ body.light-mode .location-link:hover .fa-location-dot {
 
 /* Light mode: General section styling */
 body.light-mode #Projects {
-    background-color: #ffffff; /* White background for the section */
+    background-color: #f9f4f4; /* White background for the section */
     color: #000000; /* Default black text for all content */
 }
 
@@ -554,11 +554,14 @@ body.light-mode .project-box {
     border-radius: 5px; /* Slightly rounded corners */
     padding: 15px; /* Add padding inside project boxes */
     transition: box-shadow 0.3s ease; /* Smooth shadow effect on hover */
+    border: .5px solid rgb(0, 0, 0);
 }
 
 /* Project box hover effect */
 body.light-mode .project-box:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increased shadow intensity */
+    background-color: #f9f9f9; /* Ensure background color matches */
+    border: 0.5px solid #000000; /* Subtle border for light mode */
 }
 
 body.light-mode #Projects h2 {
@@ -784,7 +787,7 @@ body.light-mode .projects-container .fa-github:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Adds depth */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds depth */
     color: white;
     width: 65%; /* Adjust width to match the layout */
     
@@ -823,6 +826,14 @@ body.light-mode .job-description p,
 body.light-mode .job-description h3,
 body.light-mode .job-description {
     color: #000000 !important; /* Default text to black */
+}
+
+body.light-mode .job-description {
+    background-color: #f9f9f9; /* Light grey background for the job description boxes */
+    border-radius: 10px; /* Optional: Add slight rounding to the corners */
+    padding: 15px; /* Optional: Add some spacing inside the text box */
+    border: 0.5px solid #dddddd; /* Optional: Add a subtle border */
+    border: .5px solid rgb(0, 0, 0);
 }
 
 /* Specifically target the JPMorgan job title */
@@ -1119,6 +1130,10 @@ body.light-mode .language-container .language:hover {
     color: rgb(3, 252, 223); /* Change to your preferred hover color */
 }
 
+body.light-mode .intro-text {
+    color: #000000 !important; /* Set text color to black */
+}
+
 
 .games-intro {
     text-align: center;        /* Center the text under Projects */
@@ -1310,6 +1325,15 @@ body.light-mode .language-container .language:hover {
     margin: 0;
 }
 
+body.light-mode .footer,
+body.light-mode .footer p {
+    color: #000000 !important; /* Force black text */
+    background-color: #f9f4f4; /* Light grey background for the footer */
+    text-align: center; /* Center align the text */
+    padding: 10px; /* Add padding for better spacing */
+    font-size: 16px; /* Adjust font size for readability */
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -1389,5 +1413,12 @@ html, body {
     100% {
         transform: translateY(-10vh) scale(0.1);
     }
+}
+
+body.light-mode .bubbles span {
+    background: #000000; /* Black bubbles */
+    box-shadow: 0 0 0 10px #00000044, /* Glow effect */
+                0 0 50px #000000, 
+                0 0 100px #000000;
 }
 
