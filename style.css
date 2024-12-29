@@ -523,6 +523,7 @@ body.light-mode .location-link:hover .fa-location-dot {
 body.light-mode #Projects {
     background-color: #f9f4f4; /* White background for the section */
     color: #000000; /* Default black text for all content */
+   
 }
 
 /* Project titles in light mode */
@@ -1226,107 +1227,7 @@ body.light-mode .games-container div:hover {
 
 
 
-.contact-box {
-    background-color: transparent; /* Transparent background */
-    padding: 20px 30px; /* Padding inside the box */
-    border-radius: 10px;
-    width: 60%; /* Adjust width */
-    margin: 135px auto; /* Center horizontally and add vertical margin */
-    text-align: left; /* Align text to the left */
-    box-shadow: none; /* No glow by default */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    display: flex; /* Make the box a flex container */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: flex-start; /* Align content to the top */
-    align-items: flex-start; /* Align items to the left */
-    border: .5px solid rgb(176, 173, 173); /* Add a solid border with a light grey color */
-    background: transparent; /* Remove any background color */
-}
 
-.contact-box:hover {
-    transform: translateY(-5px); /* Slight hover effect */
-    box-shadow: 0px 10px 20px rgba(150, 150, 150, 0.8); /* Glow effect */
-}
-
-.contact-box .contact-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    margin: 0 0 10px 0; /* No margin on top, add space below */
-    background: transparent !important; /* No background color */
-    box-shadow: none !important; /* No shadow */
-    border: none !important; /* No border */
-    padding: 0; /* No padding */
-    text-align: left;
-    position: relative;
-    font-size: 2em;
-    display: inline-block;
-
-}
-
-.contact-title::after {
-    content: "";
-    display: inline-block;
-    width: 245px; /* Adjust the width of the line */
-    height: 2px;
-    background-color: rgb(205, 168, 251); /* Same color as "About Me" */
-    position: relative;
-    top: -50px; /* Align the line vertically */
-    margin-left: 230px; /* Space between the text and the line */
-}
-
-.contact-box .contact-info {
-    font-size: 1.2rem;
-    color: rgb(176, 173, 173);
-    margin-bottom: 60px; /* Add space below the text */
-}
-
-.contact-me p:nth-child(1) { /* Makes the first line (Discord/Email/LinkedIn) bold */
-    font-weight: bold;
-}
-
-.contact-me {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px; /* Adjust spacing between items */
-    margin-top: 20px;
-}
-
-.contact-me div {
-    text-align: center;
-    color: white;
-    font-size: 16px; /* Match text size */
-    margin: 0 60px; /* Add horizontal spacing */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-}
-
-.contact-me div:hover {
-    transform: translateY(-5px); /* Slight hover */
-}
-
-.contact-me i {
-    color: white; /* Default icon color */
-    margin-bottom: 10px;
-    font-size: 50px; /* Adjust icon size */
-    transition: color 0.3s ease; /* Smooth hover effect */
-}
-
-.contact-me p {
-    margin: 5px 0;
-    font-size: 17px; /* Adjust text size */
-    color: #f0f0f0; /* Lighter text color */
-}
-
-.contact-me a {
-    color: inherit; /* Inherits the color from the parent element */
-    text-decoration: none; /* Removes underline from links */
-}
-
-.contact-me a:hover i {
-    color: #00e6e6; /* Optional: Hover effect for all icons */
-    cursor: pointer; /* Changes the cursor to a pointer */
-}
 
 
 
@@ -1351,7 +1252,7 @@ body.light-mode .games-container div:hover {
     width: 100%;
     background-color: transparent; /* Match the page background */
     box-shadow: none; /* Optional: No shadow */
-    margin-top: 250px;
+    margin-top: 100px;
 }
 
 .footer p {
@@ -1373,34 +1274,10 @@ html, body {
     min-height: 100%; /* Ensure the page content fills the viewport */
     display: flex;
     flex-direction: column;
-}
-
-.contact-box {
-    flex: 1; /* Allows the main content to take up the available space */
+    overflow-x: hidden;
 }
 
 
-
-.contact-title .wave-emoji {
-    font-size: 2rem; /* Adjust size as needed */
-    display: inline-block; /* Prevents surrounding text from moving */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-}
-
-.contact-title .wave-emoji:hover {
-    animation: wave 1s infinite; /* Triggers the waving animation */
-}
-
-@keyframes wave {
-    0%   { transform: rotate(0deg); }
-    10%  { transform: rotate(14deg); }
-    20%  { transform: rotate(-8deg); }
-    30%  { transform: rotate(14deg); }
-    40%  { transform: rotate(-4deg); }
-    50%  { transform: rotate(10deg); }
-    60%  { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
-}
 
 .container {
     position: fixed;  /* Keeps the bubbles in place even during scrolling */
@@ -1413,6 +1290,10 @@ html, body {
     pointer-events: none;  /* Makes the container non-interactive */
 }
 
+.container {
+    z-index: 10; /* Move the bubbles above most content */
+}
+
 .bubbles {
     position: relative;
     display: flex;
@@ -1420,8 +1301,8 @@ html, body {
 
 .bubbles span {
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
     background: #c0c0c0;
     margin: 0 4px;
     border-radius: 50%;
@@ -1449,9 +1330,9 @@ html, body {
 }
 
 body.light-mode .bubbles span {
-    background: #e3eb06; /* Black bubbles */
-    box-shadow: 0 0 0 15px #e3eb06, /* Glow effect */
-                0 0 50px #e3eb06, 
-                0 0 100px #e3eb06;
+    background: #efef26; /* Black bubbles */
+    box-shadow: 0 0 10px 20px #efef26, /* Increase inner glow */
+                0 0 80px #efef26,     /* Increase mid glow */
+                0 0 100px #efef26;    /* Increase outer glow */
 }
 

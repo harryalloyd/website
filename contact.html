@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/fb68bea341.js" crossorigin="anonymous"></script>
-
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Me</title>
+        <link rel="stylesheet" href="contact.css"> <!-- Added new CSS file -->
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/fb68bea341.js" crossorigin="anonymous"></script>
+    </head>
 <body>
     <div class="nav-container">
         <a href="index.html">About me</a>
@@ -15,6 +15,15 @@
         <a href="index.html#Projects">Projects</a>
         <a href="contact.html" class="active">Contact</a>
         <a href="resume.html" target="_blank" class="resume-link">Resume</a>
+
+        <!-- Theme Toggle -->
+        <div class="theme-toggle">
+            <!-- Show the moon (night icon) by default -->
+            <i class="fa-solid fa-moon" id="night-icon"></i>
+        
+            <!-- Hide the sun (day icon) by default -->
+            <i class="fa-solid fa-sun" id="day-icon" style="display:none;"></i>
+        </div>
     </div>
 
     <div class="contact-box">
@@ -104,6 +113,6 @@
     
 
 
-
+   <script src="contact.js"></script>
 </body>
 </html>
