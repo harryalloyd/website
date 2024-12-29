@@ -717,6 +717,69 @@ body.light-mode .text-box .highlight {
 
 /* Ensure all text, including active and regular items, is black in light mode */
 /* Ensure default text is black */
+/* Ensure default text in job list and description is black */
+body.light-mode .job-list li,
+body.light-mode .job-description p,
+body.light-mode .job-description h3,
+body.light-mode .job-description {
+    color: #000000 !important; /* Default text to black */
+}
+
+/* Specifically target the JPMorgan job title */
+body.light-mode .job-list li:nth-child(1) {
+    color: #000000 !important; /* Black text for JPMorgan */
+}
+
+/* Specifically target the MRK job title */
+body.light-mode .job-list li:nth-child(2) {
+    color: #000000 !important; /* Black text for MRK */
+}
+
+/* Ensure active job title is purple */
+body.light-mode .job-list li.active {
+    color: #006bbd !important; /* Purple text for active job */
+}
+
+/* Hover effect: make hovered job titles purple */
+body.light-mode .job-list li:hover {
+    color: #006bbd; /* Purple text on hover */
+}
+
+/* Preserve blue highlights in the job descriptions */
+body.light-mode .job-description .company-highlight,
+body.light-mode .job-description .highlight {
+    color: #006bbd !important; /* Blue color for highlights */
+}
+
+/* Ensure dates and additional text are black */
+body.light-mode .job-description .job-date,
+body.light-mode .job-description p,
+body.light-mode .job-description h3 {
+    color: #000000 !important; /* Ensure all text in descriptions is black */
+}
+
+/* Specific fix for JPMorgan section */
+body.light-mode .job-description:first-of-type {
+    color: #000000 !important; /* Explicitly set black for the first job description */
+}
+
+/* Ensure "Where I've Worked" title is black */
+body.light-mode #work-section h2 {
+    color: #000000 !important; /* Black for the section title */
+}
+
+body.light-mode .language-container .language {
+    color: #006bbd !important; /* Dark blue color for languages */
+}
+
+/* Optional: Add hover effect for languages */
+body.light-mode .language-container .language:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+
+
 
 
 
