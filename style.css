@@ -19,7 +19,7 @@ p{
 body {
     background-color: rgb(17, 17, 17);
     min-height: 100vh;
-    color: #fff; /* ensure text is white in dark mode */
+    color: #ffffff; /* ensure text is white in dark mode */
     transition: background 0.3s, color 0.3s; /* smooth mode change */
 }
 
@@ -87,6 +87,10 @@ body.light-mode {
     margin-right: 8px;
 }
 
+body.light-mode .nav-container a {
+    color: #000000; /* Change text color to black in light mode */
+}
+
 .resume-button {
     border: 1px solid rgb(205, 168, 251); /* Cyan border for resume button */
     font-size: 14px;
@@ -106,6 +110,10 @@ html {
 .fa-instagram { color: rgb(129, 52, 175); }
 .fa-github    { color: rgb(255, 255, 255); }
 .fa-linkedin  { color: rgb(70, 155, 224); }
+
+body.light-mode .fa-github {
+    filter: invert(1); /* Inverts the colors (black to white, white to black) */
+}
 
 .location-icons {
     display: flex;
@@ -352,6 +360,9 @@ html {
     padding: 0 !important; /* Removes padding */
 }
 
+body.light-mode .profile-text h1 {
+    color: #000000; /* Change text color to black */
+}
 
 
 .welcome-section h1 {
@@ -443,6 +454,14 @@ html {
     margin-left: 20px; /* Space between the text and line */
 }
 
+body.light-mode #About h2,
+body.light-mode #About .text-box p {
+    color: #000000; /* Change text color to black */
+}
+
+body.light-mode .text-box .highlight {
+    color: rgb(205, 168, 251); /* Keep the blue text as is */
+}
 
 
 .About-info {
@@ -695,6 +714,14 @@ html {
     color: white; /* Ensures the text color for "Where I've Worked" is white */
     text-align: left;
 }
+
+/* Ensure all text, including active and regular items, is black in light mode */
+/* Ensure default text is black */
+
+
+
+
+
 
 
 #work-section h2::after {
@@ -952,21 +979,25 @@ html {
   
   /* Sudoku & Wordle images share the same base styling */
   .sudoku-link img,
+  .battleship-link img,
   .wordle-link img {
     width: 300px;
     height: auto;
     cursor: pointer;
-    transition: transform 0.2s ease;
-    /* optional additional margin if you want more spacing 
-       from the top or sides */
+    border: .5px solid rgb(205, 168, 251);
+    padding: 5px; /* Reduced padding to lower thickness of the purple */
+    border-radius: 10px; /* Optional: Keeps rounded edges */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
-  /* Hover effect for both images */
+  /* Hover effect for images */
   .sudoku-link img:hover,
+  .battleship-link img:hover,
   .wordle-link img:hover {
     box-shadow: 0 0 15px 5px rgba(128, 128, 128, 0.6);
     transform: translateY(-10px);
   }
+  
 
 
 
@@ -1109,7 +1140,7 @@ html {
     width: 100%;
     background-color: transparent; /* Match the page background */
     box-shadow: none; /* Optional: No shadow */
-    margin-top: 150px;
+    margin-top: 250px;
 }
 
 .footer p {
