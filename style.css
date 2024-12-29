@@ -460,9 +460,27 @@ body.light-mode #About .text-box p {
 }
 
 body.light-mode .text-box .highlight {
-    color: rgb(205, 168, 251); /* Keep the blue text as is */
+    color: #006bbd; /* Keep the blue text as is */
 }
 
+body.light-mode .location-link {
+    color: rgb(174, 116, 246) !important; /* Apply dark blue color */
+    text-decoration: none; /* Remove underline for better appearance */
+}
+
+/* Optional: Add hover effect for better interaction */
+body.light-mode .location-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+body.light-mode .fa-location-dot {
+    color: rgb(174, 116, 246) !important; /* Apply dark blue color to the icon */
+}
+
+/* Optional: Add hover effect for consistency */
+body.light-mode .location-link:hover .fa-location-dot {
+    text-decoration: none; /* Keep the icon unchanged on hover */
+}
 
 .About-info {
     border: 1px solid #FFFFFF; 
