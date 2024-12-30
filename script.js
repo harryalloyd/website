@@ -19,29 +19,35 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // 2) New code for your day/night toggle
+    // 2) Updated code for day/night toggle
     const nightIcon = document.getElementById('night-icon');
     const dayIcon = document.getElementById('day-icon');
 
-    // If you want to start in dark mode with the moon visible, sun hidden
-    // make sure "fa-moon" is shown & "fa-sun" is hidden in your HTML.
-
-    nightIcon.addEventListener('click', () => {
-        // Switch to light mode
+    // Apply the saved theme on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
         document.body.classList.add('light-mode');
-        // Hide moon, show sun
+        nightIcon.style.display = 'none';
+        dayIcon.style.display = 'inline';
+    } else {
+        document.body.classList.remove('light-mode');
+        dayIcon.style.display = 'none';
+        nightIcon.style.display = 'inline';
+    }
+
+    // Add event listener to switch to light mode
+    nightIcon.addEventListener('click', () => {
+        document.body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light');
         nightIcon.style.display = 'none';
         dayIcon.style.display = 'inline';
     });
 
+    // Add event listener to switch back to dark mode
     dayIcon.addEventListener('click', () => {
-        // Switch to dark mode
         document.body.classList.remove('light-mode');
-        // Hide sun, show moon
+        localStorage.setItem('theme', 'dark');
         dayIcon.style.display = 'none';
         nightIcon.style.display = 'inline';
     });
 });
-
-
-
