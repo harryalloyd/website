@@ -1195,7 +1195,18 @@ body.light-mode .games-container div {
     padding: 0; /* Remove any internal padding */
     overflow: hidden; /* Prevent any overflow */
     display: inline-block; /* Fit the size of the content */
+    position: relative; /* Ensures each game div clips bubbles */
+    z-index: 2; /* Keep the game images above the background */
+    background-color: #ffffff; /* Match light mode background */
+
 }
+
+body.light-mode .games-container {
+    position: relative; /* Makes it a clipping container */
+    overflow: hidden; /* Clips bubbles that overflow this container */
+    z-index: 1; /* Keep the games section above the bubbles */
+}
+
 
 body.light-mode .games-container div img {
     display: block; /* Prevent inline spacing around the image */
@@ -1290,9 +1301,7 @@ html, body {
     pointer-events: none;  /* Makes the container non-interactive */
 }
 
-.container {
-    z-index: 10; /* Move the bubbles above most content */
-}
+
 
 .bubbles {
     position: relative;
@@ -1301,6 +1310,7 @@ html, body {
 
 .bubbles span {
     position: relative;
+    z-index: -2; /* Ensure bubbles stay behind everything */
     width: 22px;
     height: 22px;
     background: #c0c0c0;
@@ -1329,10 +1339,12 @@ html, body {
     }
 }
 
+/*
 body.light-mode .bubbles span {
-    background: #efef26; /* Black bubbles */
-    box-shadow: 0 0 10px 20px #efef26, /* Increase inner glow */
-                0 0 80px #efef26,     /* Increase mid glow */
-                0 0 100px #efef26;    /* Increase outer glow */
-}
+    background: #efd726; 
+    box-shadow: 0 0 10px 20px #efd726, 
+                0 0 80px #efd726,     
+                0 0 100px #efd726;    
+} 
+/*/
 
