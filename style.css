@@ -312,7 +312,7 @@ body.light-mode .fa-github {
 
 
 .profile-image-container:hover::before {
-    animation: fillRing 1.0s linear forwards;
+    animation: fillRing .80s linear forwards;
 }
 
 @keyframes fillRing {
