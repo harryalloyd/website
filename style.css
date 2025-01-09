@@ -496,7 +496,7 @@ body.light-mode .text-box .highlight {
 }
 
 body.light-mode .location-link {
-    color: rgb(174, 116, 246) !important; /* Apply dark blue color */
+    color: rgb(0, 0, 0) !important; /* Apply dark blue color */
     text-decoration: none; /* Remove underline for better appearance */
 }
 
@@ -1214,7 +1214,7 @@ body.light-mode .language-container .language:hover {
     text-align: left;
     margin-left: 530px;
     margin-top: -40px;
-    margin-bottom: 50px;
+    margin-bottom: 65px;
 }
 
 .play-button {
@@ -1251,7 +1251,7 @@ body.light-mode .intro-text {
     width: 100%;
     background-color: transparent; /* Match the page background */
     box-shadow: none; /* Optional: No shadow */
-    margin-top: 100px;
+    margin-top: 175px;
 }
 
 .footer p {
