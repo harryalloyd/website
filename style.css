@@ -468,8 +468,10 @@ body.light-mode .text-box {
     border-radius: 5px; /* Optional: Add slightly rounded corners */
     padding: 15px; /* Optional: Add some spacing inside the box */
     background-color: #ffffff; /* Optional: Ensure background remains white */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 
+body.light-mode .text-box:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 body.light-mode .text-box .highlight {
@@ -574,7 +576,7 @@ body.light-mode .project-box {
 
 /* Project box hover effect */
 body.light-mode .project-box:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increased shadow intensity */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
     background-color: #f9f9f9; /* Ensure background color matches */
     border: 0.5px solid #000000; /* Subtle border for light mode */
 }
@@ -668,7 +670,7 @@ body.light-mode .projects-container .fa-github:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;  /* Sets the z-index to negative to ensure it stays behind all other content */
+    z-index: 0;  /* Sets the z-index to negative to ensure it stays behind all other content */
     overflow: hidden;  /* Prevents any overflow content from appearing outside the container */
     pointer-events: none;  /* Makes the container non-interactive, allowing clicks to pass through to elements below */
 }
@@ -688,7 +690,16 @@ body.light-mode .projects-container .fa-github:hover {
     0 0 100px #c0c0c0;
     animation: animate 15s linear infinite;
     animation-duration: calc(500s / var(--i));
+    /* Allow pointer events on individual bubbles */
+    pointer-events: auto;
+    /* Smooth transition for scaling */
+    transition: transform 0.3s ease;
 }
+
+.bubbles span:hover {
+    transform: scale(10);
+}
+
 .bubbles span:nth-child(even) {  
     background: #c0c0c0; /* Light gray for alternating dots */
     box-shadow: 0 0 0 10px #c0c0c044, 
@@ -1192,16 +1203,17 @@ body.light-mode .intro-text {
   }
 
 body.light-mode .games-container div {
-    border: 0.5px solid rgb(0, 0, 0); /* Add the black border */
+    border: .5px solid rgb(0, 0, 0); /* Add the black border */
     border-radius: 5px; /* Optional rounded corners */
-    background-color: transparent !important; /* Ensure no background color */
+    /*background-color: transparent !important;*/ /* Ensure no background color */
+    background-color: rgb(184, 111, 111);
     margin: 0; /* Remove extra margins */
     padding: 0; /* Remove any internal padding */
     overflow: hidden; /* Prevent any overflow */
     display: inline-block; /* Fit the size of the content */
     position: relative; /* Ensures each game div clips bubbles */
     z-index: 2; /* Keep the game images above the background */
-    background-color: #ffffff; /* Match light mode background */
+    background-color: #000000; /* Match light mode background */
 
 }
 
@@ -1225,30 +1237,6 @@ body.light-mode .games-container div:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More visible shadow on hover */
 }
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
