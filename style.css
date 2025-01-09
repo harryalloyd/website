@@ -1090,7 +1090,9 @@ body.light-mode .language-container .language:hover {
     border-radius: 10px;
     padding: 20px;
     color: white;
-
+    overflow: visible;
+    position: relative;
+    
     /* Keep your preferred width/height/margin if you like */
     width: 24%;
     min-height: 350px;
@@ -1161,6 +1163,35 @@ body.light-mode .language-container .language:hover {
     margin-top: -100px;
 }
 
+#Project2 .project-box {
+    height: 400px; /* You can adjust this value as needed */
+    
+}
+
+.play-box {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #006bbd;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block !important; /* Force display */
+    opacity: 1 !important; /* Ensure visibility */
+    visibility: visible !important; /* Ensure visibility */
+    z-index: 10;
+}
+
+
+.play-box:hover {
+    background-color: #004a8b;
+}
+
 .games-intro {
     text-align: left;        /* Center the text under Projects */
     margin: 20px auto;         /* Add spacing above/below */
@@ -1171,6 +1202,23 @@ body.light-mode .language-container .language:hover {
     margin-left: 530px;
     margin-top: -40px;
     margin-bottom: 50px;
+}
+
+.play-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #006bbd;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #004a8b;
 }
 
 body.light-mode .intro-text {
