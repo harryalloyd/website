@@ -1156,91 +1156,26 @@ body.light-mode .language-container .language:hover {
     color: rgb(3, 252, 223); /* Change to your preferred hover color */
 }
 
-body.light-mode .intro-text {
-    color: #000000 !important; /* Set text color to black */
+
+#Project2 {
+    margin-top: -100px;
 }
 
-
 .games-intro {
-    text-align: center;        /* Center the text under Projects */
+    text-align: left;        /* Center the text under Projects */
     margin: 20px auto;         /* Add spacing above/below */
     color: white;              /* Ensure it’s visible on dark background */
     font-size: 1.7rem;         /* Adjust to taste */
     width: 80%;                /* Keep it narrower if desired */
-    margin-top: 30px;
     text-align: left;
-    margin-left: 450px;
-    margin-bottom: 50px;    
+    margin-left: 530px;
+    margin-top: -40px;
+    margin-bottom: 50px;
 }
 
-.games-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* or center, if you'd like them aligned in the middle */
-    gap: 50px; /* space between the two images */
-    margin-top: 20px; /* optional top margin */
-  }
-  
-  /* Sudoku & Wordle images share the same base styling */
-  .sudoku-link img,
-  .battleship-link img,
-  .wordle-link img {
-    width: 300px;
-    height: auto;
-    cursor: pointer;
-    border: .5px solid rgb(205, 168, 251);
-    padding: 5px; /* Reduced padding to lower thickness of the purple */
-    border-radius: 10px; /* Optional: Keeps rounded edges */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  /* Hover effect for images */
-  .sudoku-link img:hover,
-  .battleship-link img:hover,
-  .wordle-link img:hover {
-    box-shadow: 0 0 15px 5px rgba(128, 128, 128, 0.6);
-    transform: translateY(-10px);
-  }
-
-body.light-mode .games-container div {
-    border: .5px solid rgb(0, 0, 0); /* Add the black border */
-    border-radius: 5px; /* Optional rounded corners */
-    /*background-color: transparent !important;*/ /* Ensure no background color */
-    background-color: rgb(184, 111, 111);
-    margin: 0; /* Remove extra margins */
-    padding: 0; /* Remove any internal padding */
-    overflow: hidden; /* Prevent any overflow */
-    display: inline-block; /* Fit the size of the content */
-    position: relative; /* Ensures each game div clips bubbles */
-    z-index: 2; /* Keep the game images above the background */
-    background-color: #000000; /* Match light mode background */
-
+body.light-mode .intro-text {
+    color: #000000 !important; /* Set text color to black */
 }
-
-body.light-mode .games-container {
-    position: relative; /* Makes it a clipping container */
-    overflow: hidden; /* Clips bubbles that overflow this container */
-    z-index: 1; /* Keep the games section above the bubbles */
-}
-
-
-body.light-mode .games-container div img {
-    display: block; /* Prevent inline spacing around the image */
-    max-width: 100%; /* Ensure image doesn’t overflow container */
-    max-height: 100%; /* Keep image within the container */
-    object-fit: cover; /* Crop to fill the container while maintaining aspect ratio */
-    border-radius: 5px; /* Match container border radius */
-}
-
-/* Optional: Add hover effect for the game containers */
-body.light-mode .games-container div:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More visible shadow on hover */
-}
-  
-
-
-
-
 
 
 .footer {
