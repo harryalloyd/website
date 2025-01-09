@@ -37,7 +37,7 @@ body.light-mode {
     display: flex;
     gap: 5px; /* Space between the moon and sun icons */
     margin-right: 200px;
-    margin-top: -15px;
+    margin-top: -37px;
 }
 
 /* 4) Style the icons */
@@ -65,10 +65,26 @@ body.light-mode {
 }
 
 .nav-container {
+    position: fixed; /* Fixes the navigation at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 70px; /* Center-align the text vertically */
+    z-index: 1000; /* Ensures the nav stays above other content */
     padding: 10px 0;
     text-align: center;
-    margin-top: 20px; /* Moves downward */
-    margin-right: 20px;
+    background-color: rgba(17, 17, 17, 0.9); /* Slight transparency */
+    margin: 0; /* Remove margins to prevent shifting */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+body.light-mode .nav-container {
+    background-color: #f9f4f4;
+}
+
+/* Ensure content below doesn't overlap with fixed nav */
+body {
+    padding-top: 200px; /* Adjust padding to match nav height */
 }
 
 .nav-container a {
@@ -206,7 +222,7 @@ body.light-mode .fa-github {
     justify-content: center;
     align-items: flex-start; /* Keep content closer to the top */
     height: 100vh; /* Full viewport height */
-    padding-top: 50px; /* Spacing from the top */
+    padding-top: 100px; /* Spacing from the top */
     background: transparent; /* Match the background */
     padding-right: 60px; /* Move everything slightly to the left */
 }

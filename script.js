@@ -69,4 +69,19 @@ document.addEventListener("DOMContentLoaded", function() {
   container.addEventListener('mouseleave', function() {
     profilePic.src = originalSrc;
   });
+
+  // 4) New code for showing nav only when scrolling up
+  let lastScrollY = window.scrollY;
+  const navContainer = document.querySelector('.nav-container');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+      // Scrolling down - hide the nav
+      navContainer.style.top = '-100px'; // Move nav off-screen
+    } else {
+      // Scrolling up - show the nav
+      navContainer.style.top = '0';
+    }
+    lastScrollY = window.scrollY; // Update the last scroll position
+  });
 });
