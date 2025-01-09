@@ -111,7 +111,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.fa-instagram { color: rgb(129, 52, 175); }
+.fa-envelope { color: rgb(228, 75, 75); }
 .fa-github    { color: rgb(255, 255, 255); }
 .fa-linkedin  { color: rgb(70, 155, 224); }
 
@@ -1182,7 +1182,6 @@ body.light-mode .language-container .language:hover {
     cursor: pointer;
     transition: background-color 0.3s ease;
     white-space: nowrap; /* Prevents text from wrapping */
-
 }
 
 
