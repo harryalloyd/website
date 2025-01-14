@@ -1111,7 +1111,7 @@ body.light-mode .language-container .language:hover {
     
     /* Keep your preferred width/height/margin if you like */
     width: 24%;
-    min-height: 350px;
+    height: 450px;
     margin-left: 10px;
 
     /* Smooth hover transitions */
@@ -1180,13 +1180,13 @@ body.light-mode .language-container .language:hover {
 }
 
 #Project2 .project-box {
-    height: 400px; /* You can adjust this value as needed */
+    height: 450px; /* You can adjust this value as needed */
     
 }
 
 .play-box {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
