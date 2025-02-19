@@ -5,41 +5,89 @@
     box-sizing: border-box;
   }
   
-  /* Body Style */
+  /* Body (Dark Mode by default) */
   body {
     background-color: rgb(17, 17, 17);
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* or whichever family you use */
     min-height: 100vh;
+    padding-top: 175px; /* Ensure content sits below the fixed nav */
+    transition: background 0.3s, color 0.3s; /* Smooth transition */
   }
   
-  /* Nav Container (simple) */
+  /* Light Mode: same as your home page */
+  body.light-mode {
+    background-color: #f9f4f4; /* White-ish background */
+    color: #000000;           /* Black text */
+  }
+  
+  /* Nav Container */
   .nav-container {
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    background-color: rgba(17, 17, 17, 0.9);
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    width: 100%;
+    line-height: 70px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: rgba(17, 17, 17, 0.9);
+    margin: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
   
+  /* Light mode nav background */
+  body.light-mode .nav-container {
+    background-color: #f9f4f4;
+  }
+  
+  /* Nav links */
   .nav-container a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
-    font-size: 1.1rem;
+    margin: 5px;
+    padding: 7px;
+    font-size: 22px;
     transition: color 0.3s ease;
+    font-family: "Times New Roman", Times, serif;
   }
   
+  /* Light mode nav links */
+  body.light-mode .nav-container a {
+    color: #000;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  /* Hover effect */
   .nav-container a:hover {
     color: rgb(205, 168, 251);
   }
+  body.light-mode .nav-container a:hover {
+    color: #006bbd; /* Royal blue hover in light mode */
+  }
   
-  /* Page Title */
+  /* Theme Toggle (moon/sun) */
+  .theme-toggle {
+    position: absolute;
+    right: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 205px; /* Adjust as needed */
+    color: rgb(205, 168, 251);
+  }
+  
+  /* Sun icon in yellow */
+  .theme-toggle .fa-sun {
+    color: #ffe234; 
+  }
+  
+  /* Page Title (optional if you have one) */
   .page-title {
-    margin-top: 100px; /* So it sits below the fixed nav */
+    margin-top: 150px; 
     text-align: center;
     font-size: 2em;
     margin-bottom: 30px;
@@ -48,13 +96,13 @@
   /* Projects Container */
   .projects-container {
     display: flex;
-    justify-content: center; /* Center the row of boxes */
-    flex-wrap: wrap;         /* Allow wrapping if the screen is smaller */
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 20px;
-    gap: 20px;               /* Space between project boxes */
+    gap: 15px;
   }
   
-  /* Project Box */
+  /* Individual Project Box (Dark Mode) */
   .project-box {
     background-color: transparent;
     border-radius: 10px;
@@ -62,15 +110,15 @@
     color: white;
     overflow: visible;
     position: relative;
-    width: 24%;         /* ~4 columns possible, but effectively 3 with spacing */
-    height: 450px;      /* Same height as on index.html */
-    margin-left: 10px;  /* Matches your index.html spacing */
+    width: 24%; 
+    height: 450px;
+    margin-left: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  /* Remove left margin for the very first box in each row if desired */
+  /* Remove left margin for every first box in a row */
   .project-box:nth-child(3n+1) {
-    margin-left: 0; /* So every row's first item lines up left */
+    margin-left: 0;
   }
   
   .project-box:hover {
@@ -79,44 +127,62 @@
                 0px 15px 25px rgba(150, 150, 150, 0.4);
   }
   
-  /* Project Icons */
+  /* Light mode for the project boxes */
+  body.light-mode .project-box {
+    background-color: #f9f9f9;    /* White-ish box */
+    color: #333333;              /* Darker text */
+    border: 0.5px solid #000000; /* Thin black border */
+  }
+  
+  /* Project Icons (folder, GitHub, external link) */
   .project-icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  /* Left icon (folder) */
+  /* Folder icon (left) */
   .project-icons .fa-folder {
     font-size: 2.5em;
     color: rgba(255, 255, 255, 0.7);
     transition: color 0.3s ease;
   }
+  body.light-mode .project-icons .fa-folder {
+    color: #006bbd; /* Blue folder in light mode */
+  }
   
-  /* Right icons (GitHub & external link) */
+  /* Right icons (GitHub, external link) */
   .right-icons {
     display: flex;
     gap: 10px;
   }
-  
-  /* Smaller icon sizes for GitHub and link */
   .right-icons i {
     font-size: 1.5em;
     color: rgba(255, 255, 255, 0.7);
     transition: color 0.3s ease;
   }
+  body.light-mode .right-icons i {
+    color: #000000;
+  }
   
-  /* Hover color for all icons */
+  /* Icon hover color */
   .project-icons i:hover {
     color: rgb(3, 252, 223);
   }
+  body.light-mode .project-icons a:hover i {
+    color: #006bbd;
+  }
   
-  /* Project Title */
+  /* Project Title (Dark Mode) */
   .project-box h3 {
     font-size: 1.4em;
-    margin-top: 30px; /* Spacing below icons */
+    margin-top: 30px;
     margin-bottom: 10px;
     color: rgb(3, 252, 223);
+  }
+  /* Light Mode Project Title */
+  body.light-mode .project-box h3 {
+    color: #006bbd;
   }
   
   /* Project Description */
@@ -125,22 +191,23 @@
     line-height: 1.6;
     color: #fff;
   }
+  body.light-mode .project-box p {
+    color: #333333; 
+  }
   
-  /* Responsive: If screen is too narrow, reduce to 2 or 1 columns */
+  /* Responsive Breakpoints */
   @media (max-width: 1200px) {
     .project-box {
       width: 30%;
       margin-left: 0;
     }
   }
-  
   @media (max-width: 768px) {
     .project-box {
       width: 45%;
       margin-left: 0;
     }
   }
-  
   @media (max-width: 500px) {
     .project-box {
       width: 90%;
@@ -148,3 +215,21 @@
     }
   }
   
+
+
+  .theme-toggle {
+    position: absolute;
+    right: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 205px;
+    color: rgb(205, 168, 251);
+  }
+
+  .theme-toggle .fa-sun {
+    color: #ffe234;  /* Yellow color for the sun */
+  }

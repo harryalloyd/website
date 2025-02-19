@@ -1341,23 +1341,22 @@ body.light-mode .bubbles span {
 /*/
 
 .more-projects-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-  }
-  
-  .more-projects-box {
-    background-color: #006bbd;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-  }
-  
-  .more-projects-box:hover {
-    background-color: #004a8b;
-  }
-  
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.more-projects-box {
+  background-color: #006bbd;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.more-projects-box:hover {
+  background-color: #004a8b;
+}
