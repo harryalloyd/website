@@ -215,8 +215,7 @@
     }
   }
   
-
-
+  /* Make sure theme-toggle is on top of nav */
   .theme-toggle {
     position: absolute;
     right: 20px; 
@@ -229,7 +228,53 @@
     margin-right: 205px;
     color: rgb(205, 168, 251);
   }
-
   .theme-toggle .fa-sun {
     color: #ffe234;  /* Yellow color for the sun */
   }
+  
+  /* ==============================
+     SVG-based "Snake" overlay
+     ============================== */
+  .project-box .snake {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* so clicks pass through to project-box */
+    z-index: 999;
+  }
+  
+  .project-box .snake svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .project-box .snake rect {
+    fill: none;
+    stroke: transparent;       /* Hide by default */
+    stroke-width: 4;
+    rx: 10; ry: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 0 10px #bf00ff) drop-shadow(0 0 20px #bf00ff);
+    stroke-dasharray: 200 4000;
+    animation: none;           /* No movement until hover */
+  }
+  
+  /* 2) On hover: enable purple stroke + animation */
+  .project-box:hover .snake rect {
+    stroke: #bf00ff;           /* Now visible */
+    animation: dashAnim 10s linear infinite;
+  }
+  
+  /* Keyframes for the dash offset */
+  @keyframes dashAnim {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: -4150;
+    }
+  }
+  

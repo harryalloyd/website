@@ -3,9 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Projects</title>
-  <!-- Use the same CSS you provided (projectPage.css or style.css) -->
   <link rel="stylesheet" href="projectPage.css" />
-
   <!-- FontAwesome Icons -->
   <script src="https://kit.fontawesome.com/fb68bea341.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
@@ -14,7 +12,6 @@
 <body>
   <!-- Header/Nav Container -->
   <div class="nav-container">
-    <!-- Removed the Home link -->
     <a href="index.html#About">About Me</a>
     <a href="index.html#work-section">Experience</a>
     <a href="index.html#Projects">Projects</a>
@@ -30,88 +27,76 @@
 
   <!-- Projects Container -->
   <div class="projects-container">
+
     <!-- 1) Flappy Bird AI Game -->
-<div class="project-box">
-    <div class="project-icons">
-      <a href="https://github.com/harryalloyd/AI_flappy_bird_v2"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="View Flappy Bird AI Repo">
-        <i class="fa-regular fa-folder"></i>
-      </a>
-      <div class="right-icons">
-        <a href="https://github.com/harryalloyd/AI_flappy_bird_v2"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="View on GitHub">
-          <i class="fa-brands fa-github"></i>
+    <div class="project-box">
+      <div class="project-icons">
+        <a href="https://github.com/harryalloyd/AI_flappy_bird_v2" target="_blank" rel="noopener noreferrer" aria-label="View Flappy Bird AI Repo">
+          <i class="fa-regular fa-folder"></i>
         </a>
-        <a href="https://github.com/harryalloyd/AI_flappy_bird_v2"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Live Demo Link">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
+        <div class="right-icons">
+          <a href="https://github.com/harryalloyd/AI_flappy_bird_v2" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://github.com/harryalloyd/AI_flappy_bird_v2" target="_blank" rel="noopener noreferrer" aria-label="Live Demo Link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+      <h3>Flappy Bird AI Game</h3>
+      <p>
+        Built a Flappy Bird game using Pygame and integrated NEAT to train an AI agent.
+        Created a fitness-based training loop that rewards the AI for staying alive and
+        passing pipes, leading to gradual improvements over each generation.
+      </p>
+
+      <!-- "Snake" overlay -->
+      <div class="snake">
+        <svg>
+          <!-- Slight inset (x="2", y="2") so stroke doesn’t get clipped -->
+          <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" />
+        </svg>
       </div>
     </div>
-    <h3>Flappy Bird AI Game</h3>
-    <p>
-      Built a Flappy Bird game using Pygame and integrated NEAT to train an AI agent.
-      Created a fitness-based training loop that rewards the AI for staying alive and
-      passing pipes, leading to gradual improvements over each generation.
-    </p>
-  </div>
 
     <!-- 2) Machine Learning Image Classifier -->
-<div class="project-box">
-    <div class="project-icons">
-      <a href="https://github.com/harryalloyd/cat-v-dog-classifier/tree/main"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="View Cat vs Dog Classifier Repo">
-        <i class="fa-regular fa-folder"></i>
-      </a>
-      <div class="right-icons">
-        <a href="https://github.com/harryalloyd/cat-v-dog-classifier/tree/main"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="View on GitHub">
-          <i class="fa-brands fa-github"></i>
+    <div class="project-box">
+      <div class="project-icons">
+        <a href="https://github.com/harryalloyd/cat-v-dog-classifier/tree/main" target="_blank" rel="noopener noreferrer" aria-label="View Cat vs Dog Classifier Repo">
+          <i class="fa-regular fa-folder"></i>
         </a>
-        <a href="https://github.com/harryalloyd/cat-v-dog-classifier/tree/main"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Visit Live Site">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
+        <div class="right-icons">
+          <a href="https://github.com/harryalloyd/cat-v-dog-classifier/tree/main" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://github.com/harryalloyd/cat-v-dog-classifier/tree/main" target="_blank" rel="noopener noreferrer" aria-label="Visit Live Site">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+      <h3>Machine Learning Image Classifier</h3>
+      <p>
+        Developed a binary image classifier to distinguish cats and dogs using TensorFlow and Keras. Leveraged transfer learning with MobileNetV2 for efficient training and strong performance.
+      </p>
+
+      <div class="snake">
+        <svg>
+          <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" />
+        </svg>
       </div>
     </div>
-    <h3>Machine Learning Image Classifier</h3>
-    <p>
-      Developed a binary image classifier to distinguish cats and dogs using TensorFlow and Keras. Leveraged transfer learning with MobileNetV2 for efficient training and strong performance.
-    </p>
-  </div>
 
     <!-- 3) ISS Tracker -->
     <div class="project-box">
       <div class="project-icons">
-        <a href="https://github.com/harryalloyd/iss-tracker-project"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="View ISS Tracker Repo">
+        <a href="https://github.com/harryalloyd/iss-tracker-project" target="_blank" rel="noopener noreferrer" aria-label="View ISS Tracker Repo">
           <i class="fa-regular fa-folder"></i>
         </a>
         <div class="right-icons">
-          <a href="https://github.com/harryalloyd/iss-tracker-project"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="View on GitHub">
+          <a href="https://github.com/harryalloyd/iss-tracker-project" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="https://github.com/harryalloyd/iss-tracker-project"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="Visit Live Site">
+          <a href="https://github.com/harryalloyd/iss-tracker-project" target="_blank" rel="noopener noreferrer" aria-label="Visit Live Site">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
@@ -122,28 +107,25 @@
         sends email alerts when it's visible overhead at night. This project uses the Open 
         Notify API for ISS location data and the Sunrise-Sunset API for night-time checks.
       </p>
+
+      <div class="snake">
+        <svg>
+          <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" />
+        </svg>
+      </div>
     </div>
 
     <!-- 4) Sudoku Solver -->
     <div class="project-box">
       <div class="project-icons">
-        <a href="https://github.com/harryalloyd/sudokuSolver"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="View Sudoku Solver Repo">
+        <a href="https://github.com/harryalloyd/sudokuSolver" target="_blank" rel="noopener noreferrer" aria-label="View Sudoku Solver Repo">
           <i class="fa-regular fa-folder"></i>
         </a>
         <div class="right-icons">
-          <a href="https://github.com/harryalloyd/sudokuSolver"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="View on GitHub">
+          <a href="https://github.com/harryalloyd/sudokuSolver" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="sudoku.html"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="Play Sudoku Live">
+          <a href="sudoku.html" target="_blank" rel="noopener noreferrer" aria-label="Play Sudoku Live">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
@@ -154,28 +136,25 @@
         that completes puzzles for you using a backtracking algorithm to find solutions quickly 
         and accurately.
       </p>
+
+      <div class="snake">
+        <svg>
+          <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" />
+        </svg>
+      </div>
     </div>
 
     <!-- 5) Battleship -->
     <div class="project-box">
       <div class="project-icons">
-        <a href="https://github.com/harryalloyd/battleship"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="View Battleship Repo">
+        <a href="https://github.com/harryalloyd/battleship" target="_blank" rel="noopener noreferrer" aria-label="View Battleship Repo">
           <i class="fa-regular fa-folder"></i>
         </a>
         <div class="right-icons">
-          <a href="https://github.com/harryalloyd/battleship"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="View on GitHub">
+          <a href="https://github.com/harryalloyd/battleship" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="https://battleship-game-v2.onrender.com"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="Play Battleship Live">
+          <a href="https://battleship-game-v2.onrender.com" target="_blank" rel="noopener noreferrer" aria-label="Play Battleship Live">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
@@ -186,28 +165,25 @@
         The game includes a clean interface, real-time updates, and turn-based mechanics that replicate 
         the classic board game.
       </p>
+
+      <div class="snake">
+        <svg>
+          <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" />
+        </svg>
+      </div>
     </div>
 
     <!-- 6) Wordle -->
     <div class="project-box">
       <div class="project-icons">
-        <a href="https://github.com/harryalloyd/wordle"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="View Wordle Repo">
+        <a href="https://github.com/harryalloyd/wordle" target="_blank" rel="noopener noreferrer" aria-label="View Wordle Repo">
           <i class="fa-regular fa-folder"></i>
         </a>
         <div class="right-icons">
-          <a href="https://github.com/harryalloyd/wordle"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="View on GitHub">
+          <a href="https://github.com/harryalloyd/wordle" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="wordle.html"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="Play Wordle Live">
+          <a href="wordle.html" target="_blank" rel="noopener noreferrer" aria-label="Play Wordle Live">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
@@ -218,28 +194,25 @@
         within six tries, receiving color-coded hints for correct letters and positions. This version 
         offers a clean interface similar to the original game.
       </p>
+
+      <div class="snake">
+        <svg>
+          <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" />
+        </svg>
+      </div>
     </div>
 
     <!-- 7) Billboard Top 100 again -->
     <div class="project-box">
       <div class="project-icons">
-        <a href="https://github.com/harryalloyd/spotify-playlist-project" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           aria-label="View Billboard Project Repo">
+        <a href="https://github.com/harryalloyd/spotify-playlist-project" target="_blank" rel="noopener noreferrer" aria-label="View Billboard Project Repo">
           <i class="fa-regular fa-folder"></i>
         </a>
         <div class="right-icons">
-          <a href="https://github.com/harryalloyd/spotify-playlist-project"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="View on GitHub">
+          <a href="https://github.com/harryalloyd/spotify-playlist-project" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="https://github.com/harryalloyd/spotify-playlist-project"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="Visit Live Site">
+          <a href="https://github.com/harryalloyd/spotify-playlist-project" target="_blank" rel="noopener noreferrer" aria-label="Visit Live Site">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
@@ -250,28 +223,25 @@
         a playlist with the songs on Spotify. It automates this process using the Spotify 
         API to save time and simplify music discovery.
       </p>
+
+      <div class="snake">
+        <svg>
+          <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" />
+        </svg>
+      </div>
     </div>
 
     <!-- 8) Exercise Tracker again -->
     <div class="project-box">
       <div class="project-icons">
-        <a href="https://github.com/harryalloyd/exercise-tracker-project"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="View Exercise Tracker Repo">
+        <a href="https://github.com/harryalloyd/exercise-tracker-project" target="_blank" rel="noopener noreferrer" aria-label="View Exercise Tracker Repo">
           <i class="fa-regular fa-folder"></i>
         </a>
         <div class="right-icons">
-          <a href="https://github.com/harryalloyd/exercise-tracker-project"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="View on GitHub">
+          <a href="https://github.com/harryalloyd/exercise-tracker-project" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="https://github.com/harryalloyd/exercise-tracker-project"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="Visit Live Site">
+          <a href="https://github.com/harryalloyd/exercise-tracker-project" target="_blank" rel="noopener noreferrer" aria-label="Visit Live Site">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
@@ -282,6 +252,12 @@
         language. The app records workout data into a spreadsheet using the Nutritionix and 
         Sheety APIs, making it easier to manage fitness routines.
       </p>
+
+      <div class="snake">
+        <svg>
+          <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" />
+        </svg>
+      </div>
     </div>
 
     <!-- 9) Blank Project -->
@@ -295,7 +271,14 @@
       </div>
       <h3>Project 9</h3>
       <p>Coming soon...</p>
+
+      <div class="snake">
+        <svg>
+          <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" />
+        </svg>
+      </div>
     </div>
+
   </div>
 
   <script src="projectPage.js"></script>

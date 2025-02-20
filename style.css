@@ -1360,3 +1360,56 @@ body.light-mode .bubbles span {
 .more-projects-box:hover {
   background-color: #004a8b;
 }
+
+
+
+
+/* Snake container: applies to .project-box inside BOTH #Projects and #Project2 */
+#Projects .project-box .snake,
+#Project2 .project-box .snake {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#Projects .project-box .snake svg,
+#Project2 .project-box .snake svg {
+  width: 100%;
+  height: 100%;
+}
+
+#Projects .project-box .snake rect,
+#Project2 .project-box .snake rect {
+  fill: none;
+  stroke: transparent; /* Hidden by default */
+  stroke-width: 4;
+  rx: 10;
+  ry: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 10px #bf00ff) drop-shadow(0 0 20px #bf00ff);
+  stroke-dasharray: 300 3850;
+  animation: none;
+}
+
+/* On hover, show the purple stroke + animate for BOTH sections */
+#Projects .project-box:hover .snake rect,
+#Project2 .project-box:hover .snake rect {
+  stroke: #bf00ff;
+  animation: dashAnim 10s linear infinite;
+}
+
+/* Same keyframes for the dash offset */
+@keyframes dashAnim {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -4150;
+  }
+}
+
