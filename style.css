@@ -1432,7 +1432,7 @@ body.light-mode #Project2 .project-box:hover .snake rect {
 /* ====== SKILLS SECTION ====== */
 #skills-section {
     /* Margin-top/bottom = 50px, auto for left/right centering */
-    margin: 50px auto;
+    margin: 150px auto 50px auto;
     /* Constrain the width so the section doesn’t stretch the full page */
     width: 80%;
   }
@@ -1443,19 +1443,38 @@ body.light-mode #Project2 .project-box:hover .snake rect {
     /* This centers the text + image horizontally as a group */
     justify-content: center;
     /* Smaller gap so they’re not too far apart */
-    gap: 30px;
+    gap: 40px;
   }
 
   /* Shift the text container 30px up */
 .skills-text {
         margin-top: -40px;
         margin-bottom: 200px;
+        
   }
   
   /* Heading + List */
   .skills-text h2 {
     font-size: 2rem;
     margin-bottom: 10px;
+    position: relative;    /* Needed for the pseudo-element positioning */
+    display: inline-block; /* Ensures the heading + line stay together inline */
+  }
+
+  .skills-text h2::after {
+    content: "";
+    display: inline-block;
+    width: 170px;                     /* Adjust the line length */
+    height: 2px;
+    background-color: #cda8fb;        /* Same purple color you used */
+    position: absolute;
+    top: 20px;                        /* Shift line vertically so it’s centered with text */
+    margin-left: 20px;                /* Space between text and line */
+  }
+  
+  /* Example: if you also want a different color in light mode */
+  body.light-mode .skills-text h2::after {
+    background-color: #7b68ee;  /* Another shade of purple, optional */
   }
   
   /* Remove default bullets/padding */
@@ -1476,6 +1495,10 @@ body.light-mode #Project2 .project-box:hover .snake rect {
     font-size: 0.5em;             /* Smaller icon size */
     color: rgb(3, 252, 223);      /* Light blue */
     margin-right: 8px;
+  }
+
+  body.light-mode .skills-text li i {
+    color: #006bbd;
   }
   
   /* Image + Box */
