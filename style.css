@@ -1564,6 +1564,6 @@ body.light-mode #Project2 .project-box:hover .snake rect {
   /* This class will trigger the fade in effect */
   .fade-in {
     opacity: 0; /* Start hidden */
-    animation: fadeIn 1s forwards;
+    animation: fadeIn 1.5s forwards;
   }
   
