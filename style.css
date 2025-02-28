@@ -65,18 +65,31 @@ body.light-mode {
 }
 
 .nav-container {
-    position: fixed; /* Fixes the navigation at the top */
+    position: relative;       /* Add this */
+    /* (rest of your existing .nav-container styles) */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    line-height: 70px; /* Center-align the text vertically */
-    z-index: 1000; /* Ensures the nav stays above other content */
+    line-height: 70px;
+    z-index: 1000;
     padding: 10px 0;
     text-align: center;
-    background-color: rgba(17, 17, 17, 0.9); /* Slight transparency */
-    margin: 0; /* Remove margins to prevent shifting */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    background-color: rgba(17, 17, 17, 0.9);
+    margin: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+.header-logo {
+    position: absolute;
+    left: 50px;               /* Distance from the left edge */
+    top: 50%;                 /* Vertically center it relative to nav-container’s line-height */
+    transform: translateY(-50%);
+    width: 35px;              /* Adjust as needed for “very very small” */
+    height: auto;             /* Maintain aspect ratio */
+    object-fit: contain;      /* Just in case */
+}
+
 
 body.light-mode .nav-container {
     background-color: #f9f4f4;
