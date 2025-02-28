@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
     profilePic.src = originalSrc;
   });
 
-  // 4) New code for showing nav only when scrolling up
+  // 4) Code for showing nav only when scrolling up
   let lastScrollY = window.scrollY;
   const navContainer = document.querySelector('.nav-container');
 
@@ -83,5 +83,21 @@ document.addEventListener("DOMContentLoaded", function() {
       navContainer.style.top = '0';
     }
     lastScrollY = window.scrollY; // Update the last scroll position
+  });
+});
+
+// New fade-in code
+window.addEventListener('load', function() {
+  // Fade in the header immediately
+  const header = document.querySelector('.nav-container');
+  header.classList.add('fade-in');
+
+  // Select all major sections (all direct div children of body that are not the header)
+  const sections = document.querySelectorAll('body > div:not(.nav-container)');
+  
+  // Apply a staggered fade-in with increasing delays
+  sections.forEach((section, index) => {
+    section.style.animationDelay = `${(index + 1) * 0.5}s`;
+    section.classList.add('fade-in');
   });
 });
